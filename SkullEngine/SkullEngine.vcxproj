@@ -12,10 +12,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\SkullEngine\AGameScreen.hpp" />
+    <ClInclude Include="include\SkullEngine\ScreenManager.hpp" />
     <ClInclude Include="include\SkullEngine\Types.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AGameScreen.cpp" />
+    <ClCompile Include="ScreenManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{81DD94CA-7CB3-4182-B1EF-2A5414315337}</ProjectGuid>
