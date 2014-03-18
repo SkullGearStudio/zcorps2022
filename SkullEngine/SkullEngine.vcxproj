@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\SkullEngine\AScreenManager.hpp" />
+    <ClInclude Include="include\SkullEngine\Types.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AScreenManager.cpp" />
