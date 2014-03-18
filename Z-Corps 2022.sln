@@ -1,18 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modeling", "Modeling\Modeling.modelproj", "{DD6FC8D6-9594-43DC-B9AD-ADF9424BF536}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Z-Corps 2022", "Z-Corps 2022\Z-Corps 2022.vcxproj", "{75127E89-9196-45E3-A773-E3F3F6310A99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DD6FC8D6-9594-43DC-B9AD-ADF9424BF536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD6FC8D6-9594-43DC-B9AD-ADF9424BF536}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD6FC8D6-9594-43DC-B9AD-ADF9424BF536}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD6FC8D6-9594-43DC-B9AD-ADF9424BF536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75127E89-9196-45E3-A773-E3F3F6310A99}.Debug|ARM.ActiveCfg = Debug|Win32
+		{75127E89-9196-45E3-A773-E3F3F6310A99}.Debug|Win32.ActiveCfg = Debug|Win32
+		{75127E89-9196-45E3-A773-E3F3F6310A99}.Debug|Win32.Build.0 = Debug|Win32
+		{75127E89-9196-45E3-A773-E3F3F6310A99}.Debug|x64.ActiveCfg = Debug|Win32
+		{75127E89-9196-45E3-A773-E3F3F6310A99}.Release|ARM.ActiveCfg = Release|Win32
+		{75127E89-9196-45E3-A773-E3F3F6310A99}.Release|Win32.ActiveCfg = Release|Win32
+		{75127E89-9196-45E3-A773-E3F3F6310A99}.Release|Win32.Build.0 = Release|Win32
+		{75127E89-9196-45E3-A773-E3F3F6310A99}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
