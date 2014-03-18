@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\SkullEngine\AScreenManager.hpp">
+    <ClInclude Include="include\SkullEngine\Types.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\SkullEngine\Types.hpp">
+    <ClInclude Include="include\SkullEngine\AGameScreen.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AScreenManager.cpp">
+    <ClCompile Include="AGameScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

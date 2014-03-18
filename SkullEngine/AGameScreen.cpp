@@ -1,10 +1,10 @@
-#include "AScreenManager.hpp"
+#include "AGameScreen.hpp"
 
 namespace SkullEngine
 {
     namespace GameScreen
     {
-        AScreenManager::AScreenManager(ScreenManager::ScreenManager &scM, std::string &n) :
+        AGameScreen::AGameScreen(ScreenManager::ScreenManager &scM, std::string &n) :
             _active(false),
             _popup(false),
             _layer(100),
@@ -13,48 +13,48 @@ namespace SkullEngine
         {
         }
 
-        bool AScreenManager::IsActive() const
+        bool AGameScreen::IsActive() const
         {
             return _active;
         }
-        bool AScreenManager::IsPopup() const
+        bool AGameScreen::IsPopup() const
         {
             return _popup;
         }
-        ushort AScreenManager::Layer() const
+        ushort AGameScreen::Layer() const
         {
             return _layer;
         }
-        const std::string &AScreenManager::Name() const
+        const std::string &AGameScreen::Name() const
         {
             return _name;
         }
-        const ScreenManager::ScreenManager &AScreenManager::SCM() const
+        const ScreenManager::ScreenManager &AGameScreen::SCM() const
         {
             return _screenManager;
         }
 
-        void AScreenManager::On()
+        void AGameScreen::On()
         {
             _active = true;
         }
-        void AScreenManager::Off()
+        void AGameScreen::Off()
         {
             _active = false;
         }
-        void AScreenManager::PopUp()
+        void AGameScreen::PopUp()
         {
             _popup = true;
         }
-        void AScreenManager::PopDown()
+        void AGameScreen::PopDown()
         {
             _popup = false;
         }
-        void AScreenManager::LayerUp()
+        void AGameScreen::LayerUp()
         {
             ++_layer;
         }
-        void AScreenManager::LayerDown()
+        void AGameScreen::LayerDown()
         {
             --_layer;
         }

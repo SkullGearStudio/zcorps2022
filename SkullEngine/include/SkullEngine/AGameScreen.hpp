@@ -13,11 +13,11 @@ namespace SkullEngine
 
     namespace GameScreen
     {
-        class AScreenManager
+        class AGameScreen
         {
         public:
-            AScreenManager(ScreenManager::ScreenManager &, std::string &);
-            virtual ~AScreenManager(void) {};
+            AGameScreen(ScreenManager::ScreenManager &, std::string &);
+            virtual ~AGameScreen(void) {};
 
             virtual void Init() const = 0;
             virtual void Update() const = 0;
