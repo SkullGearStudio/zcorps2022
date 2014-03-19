@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClInclude Include="include\SkullEngine\AGameScreen.hpp" />
     <ClInclude Include="include\SkullEngine\Exception.hpp" />
+    <ClInclude Include="include\SkullEngine\IGameScreen.hpp" />
     <ClInclude Include="include\SkullEngine\ScreenManager.hpp" />
     <ClInclude Include="include\SkullEngine\Types.hpp" />
   </ItemGroup>

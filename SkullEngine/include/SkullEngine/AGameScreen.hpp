@@ -2,6 +2,7 @@
 
 #include <string>
 
+#include "IGameScreen.hpp"
 #include "Types.hpp"
 
 namespace SkullEngine
@@ -13,9 +14,9 @@ namespace SkullEngine
 
     namespace GameScreen
     {
-        class AGameScreen
+        class AGameScreen : public IGameScreen
         {
-        public:
+        protected:
             AGameScreen(ScreenManager::ScreenManager &, std::string &);
             virtual ~AGameScreen(void) {};
 
@@ -38,7 +39,7 @@ namespace SkullEngine
             void LayerUp();
             void LayerDown();
 
-        protected:
+        private:
             bool        _active;
             bool        _popup;
             ushort      _layer;

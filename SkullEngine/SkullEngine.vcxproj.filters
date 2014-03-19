@@ -27,6 +27,9 @@
     <ClInclude Include="include\SkullEngine\Exception.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SkullEngine\IGameScreen.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AGameScreen.cpp">

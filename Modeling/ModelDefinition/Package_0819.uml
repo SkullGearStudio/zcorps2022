@@ -8,6 +8,7 @@
       <Interface
         Id="4ace0322-9cfc-438b-acab-8a4594f89514"
         name="AGameScreen"
+        visibility="Protected"
         isAbstract="false"
         isLeaf="false">
         <ownedAttributes>
@@ -68,46 +69,6 @@
             isComposite="false" />
         </ownedAttributes>
         <ownedOperations>
-          <operation
-            Id="5366b540-5e9c-43e3-996a-d4fd7b5529f0"
-            name="&lt;virtual&gt;&lt;void&gt;Init"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="80d1ea55-bbb8-4818-a10a-2cb74db1a228"
-            name="&lt;virtual&gt;&lt;void&gt;Update"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="b33f6ffa-eac3-47a7-9118-d6962b1d15a4"
-            name="&lt;virtual&gt;&lt;void&gt;Event"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="f93b1703-dc19-492f-9711-b7f2d2c3983b"
-            name="&lt;virtual&gt;&lt;void&gt;Draw"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="f9cc1215-7e35-4ec6-b89d-844a622fc66d"
-            name="&lt;virtual&gt;&lt;void&gt;Destroy"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="true"
-            concurrency="Sequential"
-            isQuery="false" />
           <operation
             Id="28fabe43-54cd-4a44-8f11-bc9d2157054d"
             name="&lt;getter&gt;&lt;bool&gt;IsActive"
@@ -198,6 +159,271 @@
             isQuery="false" />
         </ownedOperations>
       </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6ae0ef44-7114-428a-aaf0-0aa4eee1c84f"
+        name="IGameScreen"
+        visibility="Protected"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="f0177cfc-f621-4253-88c1-78be78e29d9f">
+            <interfaceMoniker
+              Id="4ace0322-9cfc-438b-acab-8a4594f89514"
+              LastKnownName="AGameScreen"
+              LastKnownLocation="Package_0819.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation
+            Id="188e257c-300b-4e10-a161-d4b9c3e1082f"
+            name="&lt;virtual&gt;&lt;void&gt;Destroy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d310125b-4982-44cf-a7af-5a2975aa72a5"
+            name="&lt;virtual&gt;&lt;void&gt;Draw"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="caeedde4-2e63-4dd6-9ff6-4c4ee59bcc8a"
+            name="&lt;virtual&gt;&lt;void&gt;Event"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7ae7db5a-64f8-4037-8ed3-f5ef299c48c2"
+            name="&lt;virtual&gt;&lt;void&gt;Init"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f55ceb12-7f40-42ca-a5eb-02b448be35d7"
+            name="&lt;virtual&gt;&lt;void&gt;Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dab25bdb-aa0c-4315-8f80-0da54fd00350"
+        name="AGameScreen"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f8a3b7f6-1b82-4589-8005-05f46ddcca43">
+            <interfaceMoniker
+              Id="6ae0ef44-7114-428a-aaf0-0aa4eee1c84f"
+              LastKnownName="IGameScreen"
+              LastKnownLocation="Package_0819.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="c3e7b523-0976-4b3a-8b45-083198c85703"
+            name="&lt;bool&gt;_active"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="46e41154-6b51-420f-ab50-f5e2565a8395"
+            name="&lt;bool&gt;_popup"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7337b992-056b-49a1-ab57-12cff4b017f8"
+            name="&lt;ScreenManager&amp;&gt;_manager"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="25d3169e-7512-42bf-a8ac-60257a2a4478"
+            name="&lt;string&gt;_name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="5b553bd6-4179-41ee-aeb1-1d136e0c945f"
+            name="&lt;ushort&gt;_layer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6e3367be-fb0f-4333-865a-f5f4e4ce7ad3"
+            name="&lt;getter&gt;&lt;bool&gt;IsActive"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ea6a5dd7-04d2-46e8-9f6b-6663229d184c"
+            name="&lt;getter&gt;&lt;bool&gt;IsPopup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ea45d379-b399-4968-9687-e1f83818bd1e"
+            name="&lt;getter&gt;&lt;ScreenManager&amp;&gt;SCM"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1fa8a95b-a7ce-489f-81ed-115f1f7c433a"
+            name="&lt;getter&gt;&lt;string&amp;&gt;Name"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6cf296d7-098f-4dec-9ef6-3ed769b9b8c6"
+            name="&lt;getter&gt;&lt;ushort&gt;Layer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="124517f0-c5d9-4d8a-b9f0-eedee51f2a4f"
+            name="&lt;setter&gt;&lt;void&gt;LayerDown"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="05be59fa-e7e0-4895-ab98-bc760777d874"
+            name="&lt;setter&gt;&lt;void&gt;LayerUp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b681dac6-a921-4401-9b6a-25ec279d88b0"
+            name="&lt;setter&gt;&lt;void&gt;Off"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4fba3793-6908-4679-ad3d-f7482a253f31"
+            name="&lt;setter&gt;&lt;void&gt;On"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e512e9f4-1483-45c4-bcd6-66f9be88af1f"
+            name="&lt;setter&gt;&lt;void&gt;PopDown"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4d1202b5-9f7c-4dae-8c4f-cba916608b88"
+            name="&lt;setter&gt;&lt;void&gt;PopUp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="33cc8be2-8860-4b84-b938-9785ee8ff682"
+            name="&lt;virtual&gt;&lt;void&gt;Destroy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="52d37ea9-0262-45ec-bf66-0c0f24dde0a8"
+            name="&lt;virtual&gt;&lt;void&gt;Draw"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6b78841f-08fb-45b6-ae09-4d716f0b2794"
+            name="&lt;virtual&gt;&lt;void&gt;Event"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f0146d1b-09b9-4511-b732-187b10c8a31e"
+            name="&lt;virtual&gt;&lt;void&gt;Init"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="43bd822f-05cf-4549-88f0-350c42fa8111"
+            name="&lt;virtual&gt;&lt;void&gt;Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
 </package>

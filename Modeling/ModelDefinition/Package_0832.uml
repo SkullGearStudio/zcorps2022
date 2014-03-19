@@ -3,6 +3,16 @@
   dslVersion="1.0.0.0"
   Id="af87fbb9-897d-4027-8f55-d6fb6789880f"
   name="ScreenManager" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <importedPackagesInternal>
+    <packageImport
+      Id="fe5b4be8-1b39-4c87-a10f-d9fa66606d66"
+      visibility="Public">
+      <packageMoniker
+        Id="467b4e55-a457-4a31-88dc-f19da4eb492f"
+        LastKnownName="GameScreen"
+        LastKnownLocation="Package_0819.uml" />
+    </packageImport>
+  </importedPackagesInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
