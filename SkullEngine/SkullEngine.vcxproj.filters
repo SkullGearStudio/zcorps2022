@@ -1,66 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{ad851565-d8d1-42cc-8990-fb785b31186d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Header Files\Asset">
+    <Filter Include="Engine\Asset">
       <UniqueIdentifier>{46f83c23-ef1b-40a5-a37b-a01c0b5f7065}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\GameScreen">
+    <Filter Include="Engine\GameScreen">
       <UniqueIdentifier>{830b0768-39f5-4fde-bf7b-f8c1b4879b91}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Screen Manager">
-      <UniqueIdentifier>{ee1dcf0d-eb5d-40aa-a633-c954313e8e40}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Window">
+    <Filter Include="Engine\Window">
       <UniqueIdentifier>{c9b62d35-07c6-40a9-8782-117160f8319b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\ScreenManager">
+      <UniqueIdentifier>{ee1dcf0d-eb5d-40aa-a633-c954313e8e40}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\SkullEngine\Types.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SkullEngine\Exception.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\SkullEngine\AssetManager.hpp">
-      <Filter>Header Files\Asset</Filter>
+      <Filter>Engine\Asset</Filter>
     </ClInclude>
     <ClInclude Include="include\SkullEngine\IAsset.hpp">
-      <Filter>Header Files\Asset</Filter>
+      <Filter>Engine\Asset</Filter>
     </ClInclude>
     <ClInclude Include="include\SkullEngine\AGameScreen.hpp">
-      <Filter>Header Files\GameScreen</Filter>
+      <Filter>Engine\GameScreen</Filter>
     </ClInclude>
     <ClInclude Include="include\SkullEngine\IGameScreen.hpp">
-      <Filter>Header Files\GameScreen</Filter>
+      <Filter>Engine\GameScreen</Filter>
     </ClInclude>
     <ClInclude Include="include\SkullEngine\ScreenManager.hpp">
-      <Filter>Header Files\Screen Manager</Filter>
+      <Filter>Engine\ScreenManager</Filter>
     </ClInclude>
     <ClInclude Include="include\SkullEngine\Window.hpp">
-      <Filter>Header Files\Window</Filter>
+      <Filter>Engine\Window</Filter>
     </ClInclude>
-    <ClInclude Include="include\SkullEngine\Game.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\SkullEngine\Exception.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\Types.hpp">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\GameCore.hpp">
+      <Filter>Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AGameScreen.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Engine\GameScreen</Filter>
     </ClCompile>
     <ClCompile Include="ScreenManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Engine\ScreenManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Engine\Window</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -73,7 +73,7 @@
     <packageHasNamedElement>
       <class
         Id="98c1be00-8d81-493e-8d0a-c2beed889d12"
-        name="Game"
+        name="GameCore"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -133,13 +133,23 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="642665b3-1f5b-43a1-851e-92e02f7ab825"
-            name="Exit"
+            Id="535fcb09-2410-4b9d-8731-192161b3f257"
+            name="&lt;fct&gt;&lt;void&gt;AddWindow"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa028ea1-de8a-4785-bccb-8e88e40c13f8"
+                  name="Window *"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>

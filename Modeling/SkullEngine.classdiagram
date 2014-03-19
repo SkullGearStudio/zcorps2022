@@ -217,7 +217,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="f430be0e-1202-4954-8539-a7f2d9b2f709" name="Game" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="f430be0e-1202-4954-8539-a7f2d9b2f709" name="GameCore" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="98c1be00-8d81-493e-8d0a-c2beed889d12" />
         <ownedAttributesInternal>
           <property Id="71a010df-c716-4d72-893d-71ba8df4befa" name="&lt;AssetManager&gt; _assets" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -237,8 +237,15 @@
           <operation Id="562d0c3b-58cf-4ac1-aa7d-7d60e3561d00" name="Run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="abc5b150-92f3-411e-9757-16263c6a5cb8" />
           </operation>
-          <operation Id="ffef22dd-74eb-45e0-accf-75bb92995d9d" name="Exit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="642665b3-1f5b-43a1-851e-92e02f7ab825" />
+          <operation Id="02b08a0b-5ca1-4aa7-b16e-2d74c5bbd6d3" name="&lt;fct&gt;&lt;void&gt;AddWindow" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="535fcb09-2410-4b9d-8731-192161b3f257" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b570aee4-8b3b-42fc-8b5a-962d8bde59bd" name="Window *" direction="In" isUnique="false">
+                  <elementDefinition Id="aa028ea1-de8a-4785-bccb-8e88e40c13f8" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -266,16 +273,66 @@
                 <property Id="111366cb-3d76-4c12-a437-8a1482ca1bd1" name="&lt;Game&amp;&gt;_main" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="c35db816-7d67-4825-ac83-52fc77558a56" />
                 </property>
+                <property Id="a9a8e56f-073c-4611-ae2d-f2a27e93686e" name="&lt;scene_map&gt;_scene" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0f7da48a-94c1-43db-8702-74c0388382de" />
+                </property>
+                <property Id="babd97f5-18c3-4c19-9d64-95c191a34860" name="&lt;Scene *&gt;_current" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9e3df96f-4bfa-411d-9e68-bbe14ac6188a" />
+                </property>
+                <property Id="7cd40bb8-0f19-495c-8843-cc66bd7a34d9" name="&lt;sf::RenderWindow *&gt;_render" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ad3091ef-7c2f-453e-ac5a-31d9e446abd4" />
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="e8d06036-4384-48ec-a407-d1d0a4f50242" name="Run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="e8d06036-4384-48ec-a407-d1d0a4f50242" name="&lt;fct&gt;&lt;void&gt;Run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="d97cbd6f-e84d-4eb3-b67a-a614b40b2428" />
                 </operation>
-                <operation Id="32b3d946-76a5-4294-bba9-c8a0c2856105" name="Exit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="32b3d946-76a5-4294-bba9-c8a0c2856105" name="&lt;fct&gt;&lt;void&gt;Exit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="94d400df-faa3-41ed-b101-1c91cbdbbfe2" />
                 </operation>
                 <operation Id="91b70c76-c680-4041-bb32-402a14902d66" name="&lt;getter&gt;&lt;AssetManager&amp;&gt;ASM" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="4400c2bf-3e11-43ac-824b-e011e0cfd1f1" />
+                </operation>
+                <operation Id="60776242-3530-410a-aae8-8e67dffa0e96" name="&lt;fct&gt;&lt;void&gt;LoadScene" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f28c1738-54b3-4f17-8767-0abf38c8221a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="214c065f-5ebb-4557-b7bc-b6825a3751d2" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="43095ecd-57c3-4bdf-bcac-81d55a7f36dd" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="a76194e0-5828-49d4-a4d2-de3726a17838" name="&lt;fct&gt;&lt;void&gt;AddScene" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a2d00cb2-9cbe-4c2e-94ab-20ae04cb9b24" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3f1c6123-1c98-4de3-97c3-734db5a81a1f" name="Scene &amp;" direction="In" isUnique="false">
+                        <elementDefinition Id="9df2c82b-d9c1-4ede-85a7-50b0fdb2a36a" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="a8265d4c-803d-49f3-b01e-f691f3faf8fb" name="&lt;getter&gt;&lt;sf::RenderWindow &amp;&gt;Render" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="afb2186b-f0de-4078-ae97-8ff4d4f5da86" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="41045050-375a-4d96-abd4-1bc05a71f6dc" name="Scene" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="684591ed-2e21-45f4-a671-b14ffd6de7b2" />
+              <ownedAttributesInternal>
+                <property Id="b5415c3c-b057-41d1-8ca7-a3adf1c79a0c" name="&lt;screen_list&gt;_screens" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c15c491c-a252-4c87-ba83-e339fd68269a" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="6275b6d8-b63b-45d7-ac28-f903d22dc491" name="&lt;fct&gt;&lt;void&gt;AddScreen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ec6b328d-cd94-46b6-ad34-f089558617d4" />
+                </operation>
+                <operation Id="07f60727-b6db-49c8-b02c-164d66577489" name="&lt;getter&gt;&lt;screen_list&gt;Screens" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="965e277b-374b-4560-9583-60c8bc60596d" />
                 </operation>
               </ownedOperationsInternal>
             </class>
