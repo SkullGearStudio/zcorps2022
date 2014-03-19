@@ -1,5 +1,14 @@
 #pragma once
 
+// Forward declaration
+namespace std
+{
+    template<typename T, typename U>
+    class map;
+    template<typename T>
+    class list;
+}
+
 namespace SkullEngine
 {
     // Forward declaration
