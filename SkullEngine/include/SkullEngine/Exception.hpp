@@ -7,7 +7,9 @@ namespace SkullEngine
 {
     struct Exception : public std::exception
     {
+        // ATTR
         const char *_msg;
+        //METHODS
         Exception(const char *msg) : _msg(msg) {}
         ~Exception() throw () {}
         const char *what() const throw() { return _msg; }

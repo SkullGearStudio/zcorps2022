@@ -1,4 +1,5 @@
 #include "AGameScreen.hpp"
+#include "Exception.hpp"
 
 namespace SkullEngine
 {
@@ -9,7 +10,7 @@ namespace SkullEngine
             _popup(false),
             _layer(100),
             _name(n),
-            _screenManager(scM)
+            _manager(scM)
         {
         }
 
@@ -31,24 +32,60 @@ namespace SkullEngine
         }
         const ScreenManager::ScreenManager &AGameScreen::SCM() const
         {
-            return _screenManager;
+            return _manager;
         }
 
         void AGameScreen::On()
         {
-            _active = true;
+            try
+            {
+                if (IsActive())
+                    throw Exception(std::string("Screen [" + Name() + "] is already active").c_str());
+                _active = true;
+            } catch (Exception ex)
+            {
+                ex.box();
+                ::exit(-1);
+            }
         }
         void AGameScreen::Off()
         {
-            _active = false;
+            try
+            {
+                if (!IsActive())
+                    throw Exception(std::string("Screen [" + Name() + "] is already unactive").c_str());
+                _active = false;
+            } catch (Exception ex)
+            {
+                ex.box();
+                ::exit(-1);
+            }
         }
         void AGameScreen::PopUp()
         {
-            _popup = true;
+            try
+            {
+                if (IsPopup())
+                    throw Exception(std::string("Screen [" + Name() + "] is already on top").c_str());
+                _popup = true;
+            } catch (Exception ex)
+            {
+                ex.box();
+                ::exit(-1);
+            }
         }
         void AGameScreen::PopDown()
         {
-            _popup = false;
+            try
+            {
+                if (!IsPopup())
+                    throw Exception(std::string("Screen [" + Name() + "] is already on background").c_str());
+                _popup = false;
+            } catch (Exception ex)
+            {
+                ex.box();
+                ::exit(-1);
+            }
         }
         void AGameScreen::LayerUp()
         {

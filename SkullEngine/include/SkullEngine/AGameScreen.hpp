@@ -43,7 +43,7 @@ namespace SkullEngine
             bool        _popup;
             ushort      _layer;
             std::string _name;
-            ScreenManager::ScreenManager &_screenManager;
+            ScreenManager::ScreenManager &_manager;
         };
     }
 }
