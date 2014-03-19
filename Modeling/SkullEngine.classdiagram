@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f17b0c8a-efb9-4365-98af-da4fc5ff9bd9" name="SkullEngine" linkedPackageId="7c03d7f3-97d5-468c-a307-0651386a8fd1" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="e941aa59-accf-484e-899c-defb77fe23ed">
-      <profileInstance Id="223f212f-5802-423a-9a77-d56bc46604ad" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="44ae70e1-b8c5-48e8-bcc1-7fcd3db75e7b">
-      <profileInstance Id="890afe5a-41c9-4f4b-ab6d-091b10716dcf" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="5682c983-5fdb-47e2-bbc5-65359c0b754c" name="GameScreen">
@@ -57,7 +43,7 @@
                 <property Id="ed9fd580-e0ce-426c-bef7-1e7cf8854b01" name="&lt;bool&gt;_popup" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="46e41154-6b51-420f-ab50-f5e2565a8395" />
                 </property>
-                <property Id="2cd0264e-7cb2-4079-abed-19756d39f93d" name="&lt;ScreenManager&amp;&gt;_manager" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="2cd0264e-7cb2-4079-abed-19756d39f93d" name="&lt;ScreenManager&amp;&gt;_scm" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="7337b992-056b-49a1-ab57-12cff4b017f8" />
                 </property>
                 <property Id="7f474cf1-a48f-47d8-97d5-ed9c7cd08ad9" name="&lt;string&gt;_name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -142,6 +128,9 @@
                 <property Id="194189cd-9c06-413c-a5b0-07f63764c0cb" name="&lt;screen_list&gt;_actives" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="d6057761-a2ed-49b4-a8f1-6816b069826e" />
                 </property>
+                <property Id="697b6dbd-4b15-491e-bd08-f857fe285844" name="&lt;Window&amp;&gt;_win" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0fbcd9d3-edf8-4a2a-b71d-c09f266bfede" />
+                </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
                 <operation Id="22716aca-d2bd-4c17-bfcf-09aee133b32b" name="&lt;fct&gt;&lt;void&gt;AddScreen" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -200,6 +189,9 @@
                 <operation Id="7b786c2e-a0d1-4afb-ba73-afc23f44e165" name="&lt;fct&gt;&lt;void&gt;Run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="b8841ac6-e71b-43e0-9b56-86caed3d7728" />
                 </operation>
+                <operation Id="c8562390-2f2a-476e-8724-3bd30e4b5eb6" name="&lt;getter&gt;&lt;Window&amp;&gt;Win" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="21bca8b9-0026-491d-a4e6-8578f1d65d6d" />
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
@@ -224,8 +216,143 @@
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f430be0e-1202-4954-8539-a7f2d9b2f709" name="Game" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="98c1be00-8d81-493e-8d0a-c2beed889d12" />
+        <ownedAttributesInternal>
+          <property Id="71a010df-c716-4d72-893d-71ba8df4befa" name="&lt;AssetManager&gt; _assets" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="777d9b81-059d-4480-90a2-e8ae0bf04d8f" />
+          </property>
+          <property Id="beb35f37-2ab1-4ef1-838d-f9e892d78ab2" name="&lt;Window *&gt;_current" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="94b49357-5081-4da5-8bf2-53a2d2c50cca" />
+          </property>
+          <property Id="a10b60ac-1e1f-4aa0-9102-77813d2110d6" name="&lt;bool&gt;_exit" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="69872922-e773-4412-9ae1-95807f1c95bb" />
+          </property>
+          <property Id="5f87de7e-0427-4882-ad3b-15ad656a116d" name="&lt;window_queue&gt;_windows" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9bb4c260-edd4-4602-8778-47fe5dd0b070" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="562d0c3b-58cf-4ac1-aa7d-7d60e3561d00" name="Run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="abc5b150-92f3-411e-9757-16263c6a5cb8" />
+          </operation>
+          <operation Id="ffef22dd-74eb-45e0-accf-75bb92995d9d" name="Exit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="642665b3-1f5b-43a1-851e-92e02f7ab825" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="7eeac745-c8f4-40ef-a385-58725a9b8bf4" name="Window">
+        <elementDefinition Id="46313411-c9dc-403a-9d57-101e83130d3b" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="4e2f723e-cd71-474c-8c6f-c87d6632dbfb" name="Window" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="0851ceaa-7ec2-434b-8703-6185e93455c4" />
+              <ownedAttributesInternal>
+                <property Id="21fb84b3-74d1-4da5-b615-6c92e186ae01" name="&lt;WindowType&gt;_type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5c8bf0c5-d738-4e65-b254-8a34f284be43" />
+                </property>
+                <property Id="e9bc9055-2b0c-484b-8e35-fac9e674e39d" name="&lt;AssetManager&amp;&gt;_asm" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b721578d-3031-427c-ab0d-3078e1309a92" />
+                </property>
+                <property Id="1beb2b62-c574-4d2e-9dc7-7b0ce3e00a40" name="&lt;ScreenManager&gt;_scm" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5a493b5b-1717-4d25-b018-6874fe4431a3" />
+                </property>
+                <property Id="990e3ab7-0995-4912-a84e-53299c87c42a" name="&lt;bool&gt;_exit" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1f8d436f-c20a-43d6-9598-a7643cad1f5c" />
+                </property>
+                <property Id="111366cb-3d76-4c12-a437-8a1482ca1bd1" name="&lt;Game&amp;&gt;_main" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c35db816-7d67-4825-ac83-52fc77558a56" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="e8d06036-4384-48ec-a407-d1d0a4f50242" name="Run" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d97cbd6f-e84d-4eb3-b67a-a614b40b2428" />
+                </operation>
+                <operation Id="32b3d946-76a5-4294-bba9-c8a0c2856105" name="Exit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="94d400df-faa3-41ed-b101-1c91cbdbbfe2" />
+                </operation>
+                <operation Id="91b70c76-c680-4041-bb32-402a14902d66" name="&lt;getter&gt;&lt;AssetManager&amp;&gt;ASM" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4400c2bf-3e11-43ac-824b-e011e0cfd1f1" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="e5388698-4669-4ca8-8163-b6bfeb34a459" name="Assets">
+        <elementDefinition Id="ea40f42a-4933-4cf4-9090-314cf59a15c0" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="0272772a-e8cd-49bb-af7c-d3fe610a292e" name="AssetManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="88e3f49f-b48b-44ac-b6ec-60d10093feac" />
+              <ownedAttributesInternal>
+                <property Id="e19e4bc7-4195-4e88-af35-7f9f51ad329d" name="&lt;asset_map&gt;_assets" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="78f678f9-12b5-4e42-8ca5-686fcd69c240" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="88d73ca6-bc22-466a-a466-95d871859744" name="&lt;fct&gt;&lt;void&gt;LoadAsset" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="cf16a905-33bb-4dc2-9318-844ff240fd3e" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e70263f6-1b5a-45be-a684-111f3952ba63" name="IAsset&amp;" direction="In" isUnique="false">
+                        <elementDefinition Id="aab86882-70bd-4afd-8b73-6eb0afe0f90e" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="5eda5a4b-0403-48cf-a84c-9a65c0cc245c" name="&lt;fct&gt;&lt;void&gt;UnloadAsset" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4da4bc80-ed22-4fe8-b3fa-3776dc932704" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ebf3db76-eb37-4bfe-8994-02e97c2063d2" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="1c0a9c0b-4503-4d2d-a072-4dc29cdf26dc" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="a2340353-1454-4db5-b7e4-dd886f32355c" name="&lt;fct&gt;&lt;IAsset&amp;&gt;GetAsset" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="7b707ed7-3a0d-42eb-aabf-d44f74cbeb9f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c62f2b78-f064-4f64-9619-0a626703b8cd" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="36fc4728-ffb8-4bca-8377-163d114b484f" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="2218f9d4-dc6f-4b67-aeba-c112a0556df8" name="IAsset" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="ffc051eb-89c0-44e7-9e03-5f652152161a" />
+            </Interface>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
   </packagedElements>
   <package Id="7c03d7f3-97d5-468c-a307-0651386a8fd1" name="Modeling">
     <elementDefinition Id="10254354-90a4-4ee4-82e2-b099dc35f409" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e941aa59-accf-484e-899c-defb77fe23ed">
+        <profileInstance Id="223f212f-5802-423a-9a77-d56bc46604ad" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="44ae70e1-b8c5-48e8-bcc1-7fcd3db75e7b">
+        <profileInstance Id="890afe5a-41c9-4f4b-ab6d-091b10716dcf" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

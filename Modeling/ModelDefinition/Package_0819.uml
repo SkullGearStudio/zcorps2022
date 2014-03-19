@@ -261,7 +261,7 @@
             isComposite="false" />
           <property
             Id="7337b992-056b-49a1-ab57-12cff4b017f8"
-            name="&lt;ScreenManager&amp;&gt;_manager"
+            name="&lt;ScreenManager&amp;&gt;_scm"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

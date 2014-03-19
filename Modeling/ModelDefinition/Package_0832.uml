@@ -44,6 +44,17 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="0fbcd9d3-edf8-4a2a-b71d-c09f266bfede"
+            name="&lt;Window&amp;&gt;_win"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -147,6 +158,14 @@
           <operation
             Id="b8841ac6-e71b-43e0-9b56-86caed3d7728"
             name="&lt;fct&gt;&lt;void&gt;Run"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="21bca8b9-0026-491d-a4e6-8578f1d65d6d"
+            name="&lt;getter&gt;&lt;Window&amp;&gt;Win"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
