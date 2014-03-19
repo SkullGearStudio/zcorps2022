@@ -16,7 +16,7 @@ namespace SkullEngine
     {
         class AGameScreen : public IGameScreen
         {
-        protected:
+        public:
             AGameScreen(ScreenManager::ScreenManager &, std::string &);
             virtual ~AGameScreen(void) {};
 

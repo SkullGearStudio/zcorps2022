@@ -12,6 +12,10 @@ namespace SkullEngine
     {
         class ScreenManager
         {
+        private:
+            typedef GameScreen::AGameScreen Screen;
+            typedef	std::map<std::string, Screen *> screen_map;
+            typedef std::list<Screen *> screen_list;
         public:
             ScreenManager(void) {};
             ~ScreenManager(void) {};

@@ -6,7 +6,7 @@ namespace SkullEngine
     {
         class IGameScreen
         {
-        protected:
+        public:
             virtual ~IGameScreen(void) {}
 
             virtual void Init() const = 0;
