@@ -13,21 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Asset">
+      <UniqueIdentifier>{46f83c23-ef1b-40a5-a37b-a01c0b5f7065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameScreen">
+      <UniqueIdentifier>{830b0768-39f5-4fde-bf7b-f8c1b4879b91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Screen Manager">
+      <UniqueIdentifier>{ee1dcf0d-eb5d-40aa-a633-c954313e8e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Window">
+      <UniqueIdentifier>{c9b62d35-07c6-40a9-8782-117160f8319b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\SkullEngine\Types.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\SkullEngine\AGameScreen.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\SkullEngine\ScreenManager.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\SkullEngine\Exception.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\SkullEngine\AssetManager.hpp">
+      <Filter>Header Files\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\IAsset.hpp">
+      <Filter>Header Files\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\AGameScreen.hpp">
+      <Filter>Header Files\GameScreen</Filter>
+    </ClInclude>
     <ClInclude Include="include\SkullEngine\IGameScreen.hpp">
+      <Filter>Header Files\GameScreen</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\ScreenManager.hpp">
+      <Filter>Header Files\Screen Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\Window.hpp">
+      <Filter>Header Files\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\Game.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
