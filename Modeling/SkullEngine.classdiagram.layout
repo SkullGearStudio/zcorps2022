@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Engine">
+  <logicalClassDesignerModelMoniker Id="f17b0c8a-efb9-4365-98af-da4fc5ff9bd9" />
+  <nestedChildShapes>
+    <classShape Id="e3c7ffb4-3308-45fe-98aa-c2c95ac0a1db" absoluteBounds="7, 0.625, 1.75, 1.3828124701976772" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="ccec5578-c6c7-4b85-8968-fab17fdf9eb4" LastKnownName="Exception" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="2255aafc-42a0-4751-81f2-5ef99ce3b4fc" absoluteBounds="7.015, 1.0150000000000001, 1.7200000000000002, 0.36132811258236563" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="d1f9f48b-7653-49e2-8327-beff7c1b57d9" absoluteBounds="7.015, 1.3863281125823654, 1.7200000000000002, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <packageShape Id="6c5e1f33-a369-464f-9a2b-804ac9959892" absoluteBounds="0.5, 0.625, 2.75, 4.875" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="5682c983-5fdb-47e2-bbc5-65359c0b754c" LastKnownName="GameScreen" />
+      <nestedChildShapes>
+        <interfaceShape Id="37c547b4-145f-4706-a98a-f36d0473fa7e" absoluteBounds="0.75, 1.125, 2.25, 4.26562488079071" hideQualifiedName="false" increaseHeight="0" customColor="207, 223, 191">
+          <interfaceMoniker Id="ceb2ae4f-65c8-4178-a399-52055868e84d" LastKnownName="AGameScreen" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="b7b73664-b004-4d39-a2b0-ea923d3dc790" absoluteBounds="0.7649999999999999, 1.5150000000000001, 2.2199999999999998, 1.0019530927141505" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="34b587d7-7c22-48a2-a36a-1985b936cba7" absoluteBounds="0.7649999999999999, 2.5269530927141508, 2.2199999999999998, 2.7636717880765596" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </interfaceShape>
+      </nestedChildShapes>
+    </packageShape>
+    <packageShape Id="3a28446b-acab-415f-bfe4-a7c4c0927042" absoluteBounds="3.625, 0.625, 3.25, 3" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="5e0e23d9-753d-4a8d-8493-3ae9972a9a90" LastKnownName="ScreenManager" />
+      <nestedChildShapes>
+        <classShape Id="374a27d2-120b-41d3-aba3-310514b44a70" absoluteBounds="3.875, 1.125, 2.5, 2.3437499403953552" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="5ee1fb90-94d7-4c3c-8f7e-851cc1b41fdd" LastKnownName="ScreenManager" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="e08a90d3-c170-4bec-af0f-7017c7239e89" absoluteBounds="3.89, 1.5150000000000001, 2.4699999999999998, 0.52148435761531187" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="8df85503-dedc-419d-b537-1023b6e71d31" absoluteBounds="3.89, 2.046484357615312, 2.4699999999999998, 1.3222655827800431" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>
