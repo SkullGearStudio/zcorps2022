@@ -3,9 +3,11 @@
 #include <Windows.h>
 #include <exception>
 
+#include "SkullEngine.hpp"
+
 namespace SkullEngine
 {
-    struct Exception : public std::exception
+    struct SKULLENGINE_API Exception : public std::exception
     {
         // ATTR
         const char *_msg;

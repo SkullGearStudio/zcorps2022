@@ -13,17 +13,6 @@
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
-            Id="5c8bf0c5-d738-4e65-b254-8a34f284be43"
-            name="&lt;WindowType&gt;_type"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="b721578d-3031-427c-ab0d-3078e1309a92"
             name="&lt;AssetManager&amp;&gt;_asm"
             isLeaf="false"

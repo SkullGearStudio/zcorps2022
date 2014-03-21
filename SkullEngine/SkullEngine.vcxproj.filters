@@ -16,6 +16,9 @@
     <Filter Include="Engine\ScreenManager">
       <UniqueIdentifier>{ee1dcf0d-eb5d-40aa-a633-c954313e8e40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{d5972009-a8c4-4c96-85cd-587374c6ff97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\SkullEngine\AssetManager.hpp">
@@ -44,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="include\SkullEngine\GameCore.hpp">
       <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\SkullEngine.hpp">
+      <Filter>Misc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

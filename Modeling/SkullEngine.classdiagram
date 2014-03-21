@@ -43,7 +43,7 @@
                 <property Id="ed9fd580-e0ce-426c-bef7-1e7cf8854b01" name="&lt;bool&gt;_popup" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="46e41154-6b51-420f-ab50-f5e2565a8395" />
                 </property>
-                <property Id="2cd0264e-7cb2-4079-abed-19756d39f93d" name="&lt;ScreenManager&amp;&gt;_scm" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="2cd0264e-7cb2-4079-abed-19756d39f93d" name="&lt;ScreenManager&amp;&gt;_manager" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="7337b992-056b-49a1-ab57-12cff4b017f8" />
                 </property>
                 <property Id="7f474cf1-a48f-47d8-97d5-ed9c7cd08ad9" name="&lt;string&gt;_name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -60,7 +60,7 @@
                 <operation Id="74950f61-d62d-4a39-9e03-665c4bc220de" name="&lt;getter&gt;&lt;bool&gt;IsPopup" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="ea6a5dd7-04d2-46e8-9f6b-6663229d184c" />
                 </operation>
-                <operation Id="523dcbb3-b809-4c80-9cd4-d8f9aa429f31" name="&lt;getter&gt;&lt;ScreenManager&amp;&gt;SCM" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="523dcbb3-b809-4c80-9cd4-d8f9aa429f31" name="&lt;getter&gt;&lt;ScreenManager&amp;&gt;Manager" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="ea45d379-b399-4968-9687-e1f83818bd1e" />
                 </operation>
                 <operation Id="3cd2d7c4-bc86-45a9-bda3-c3bd211a9aed" name="&lt;getter&gt;&lt;string&amp;&gt;Name" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -258,9 +258,6 @@
             <class Id="4e2f723e-cd71-474c-8c6f-c87d6632dbfb" name="Window" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="0851ceaa-7ec2-434b-8703-6185e93455c4" />
               <ownedAttributesInternal>
-                <property Id="21fb84b3-74d1-4da5-b615-6c92e186ae01" name="&lt;WindowType&gt;_type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="5c8bf0c5-d738-4e65-b254-8a34f284be43" />
-                </property>
                 <property Id="e9bc9055-2b0c-484b-8e35-fac9e674e39d" name="&lt;AssetManager&amp;&gt;_asm" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="b721578d-3031-427c-ab0d-3078e1309a92" />
                 </property>

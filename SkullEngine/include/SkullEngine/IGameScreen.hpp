@@ -1,10 +1,12 @@
 #pragma once
 
+#include "SkullEngine.hpp"
+
 namespace SkullEngine
 {
     namespace GameScreen
     {
-        class IGameScreen
+        class SKULLENGINE_API IGameScreen
         {
         public:
             virtual ~IGameScreen(void) {}

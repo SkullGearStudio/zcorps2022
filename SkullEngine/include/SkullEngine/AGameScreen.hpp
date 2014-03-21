@@ -2,6 +2,7 @@
 
 #include <string>
 
+#include "SkullEngine.hpp"
 #include "IGameScreen.hpp"
 #include "Types.hpp"
 
@@ -9,10 +10,10 @@ namespace SkullEngine
 {
     namespace GameScreen
     {
-        class AGameScreen : public IGameScreen
+        class SKULLENGINE_API AGameScreen : public IGameScreen
         {
         public:
-            AGameScreen(SCM &, std::string &);
+            AGameScreen(ScreenManager::ScreenManager &, std::string &);
             virtual ~AGameScreen(void) {};
 
             virtual void Init() const = 0;
@@ -25,7 +26,7 @@ namespace SkullEngine
             bool IsPopup() const;
             ushort Layer() const;
             const std::string &Name() const;
-            const SCM &Manager() const;
+            const ScreenManager::ScreenManager &Manager() const;
 
             void On();
             void Off();
@@ -39,7 +40,7 @@ namespace SkullEngine
             bool        _popup;
             ushort      _layer;
             std::string _name;
-            SCM &_manager;
+            ScreenManager::ScreenManager &_manager;
         };
     }
 }

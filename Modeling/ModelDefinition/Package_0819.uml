@@ -261,7 +261,7 @@
             isComposite="false" />
           <property
             Id="7337b992-056b-49a1-ab57-12cff4b017f8"
-            name="&lt;ScreenManager&amp;&gt;_scm"
+            name="&lt;ScreenManager&amp;&gt;_manager"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -312,7 +312,7 @@
             isQuery="false" />
           <operation
             Id="ea45d379-b399-4968-9687-e1f83818bd1e"
-            name="&lt;getter&gt;&lt;ScreenManager&amp;&gt;SCM"
+            name="&lt;getter&gt;&lt;ScreenManager&amp;&gt;Manager"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

@@ -3,6 +3,7 @@
 #include <map>
 #include <list>
 
+#include "SkullEngine.hpp"
 #include "AGameScreen.hpp"
 #include "Types.hpp"
 
@@ -10,7 +11,7 @@ namespace SkullEngine
 {
     namespace ScreenManager
     {
-        class ScreenManager
+        class SKULLENGINE_API ScreenManager
         {
         private:
             typedef	std::map<std::string, Screen *> screen_map;
