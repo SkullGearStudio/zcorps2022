@@ -32,7 +32,6 @@ namespace SkullEngine
             void	UnactiveScreen(const std::string &);
             void	UnactiveScreen(Screen *);
             const   Window::Window  &Win() const;
-            void	Dump() const;
             void	Run() const;
 
         private:

@@ -20,10 +20,9 @@ namespace SkullEngine
             IAsset &GetAsset(const std::string &) const;
             void    LoadAsset(IAsset &);
             void    UnloadAsset(const std::string &);
-            void    Dump() const;
 
         private:
-            asset_map   _assets;
+            asset_map   *_assets;
         };
     }
 }

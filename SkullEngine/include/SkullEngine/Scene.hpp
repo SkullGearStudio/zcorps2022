@@ -16,14 +16,16 @@ namespace SkullEngine
             typedef std::list<Screen *> screen_list;
 
         public:
-            Scene(void) {};
+            Scene(const std::string &);
             ~Scene(void) {};
 
-            void AddScreen(const Screen &);
+            void AddScreen(Screen &);
+            const std::string &Name();
             const screen_list &Screens() const;
 
         private:
-            screen_list _screens;
+            screen_list *_screens;
+            std::string *_name;
         };
     }
 }

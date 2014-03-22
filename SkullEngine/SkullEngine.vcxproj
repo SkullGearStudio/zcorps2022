@@ -64,6 +64,8 @@
     <OutDir>$(Configuration)\</OutDir>
     <ExtensionsToDeleteOnClean>.dll;$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
     <IncludePath>include\SkullEngine\;$(IncludePath)</IncludePath>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -79,6 +81,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SKULLENGINE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)SFML-2.1\include</AdditionalIncludeDirectories>
+      <EnablePREfast>true</EnablePREfast>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

@@ -105,5 +105,8 @@ namespace SkullEngine
         {
             return _win;
         }
+        void    ScreenManager::Run() const
+        {
+        }
     }
 }

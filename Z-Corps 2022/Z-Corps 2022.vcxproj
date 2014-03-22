@@ -44,6 +44,8 @@
     <ExtensionsToDeleteOnClean>*.dll</ExtensionsToDeleteOnClean>
     <OutDir>$(Configuration)\</OutDir>
     <TargetName>ZCorps2022</TargetName>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
@@ -58,6 +60,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)\SkullEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnablePREfast>true</EnablePREfast>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

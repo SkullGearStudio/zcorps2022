@@ -12,7 +12,7 @@ namespace SkullEngine
         while (!_windows.empty())
         {
             _current = _windows.front();
-            _windows.pop;
+            _windows.pop();
             _current->Start();
             while (_current->Render().isOpen())
                 _current->Run();
