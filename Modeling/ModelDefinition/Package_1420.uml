@@ -46,17 +46,6 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="c35db816-7d67-4825-ac83-52fc77558a56"
-            name="&lt;Game&amp;&gt;_main"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="0f7da48a-94c1-43db-8702-74c0388382de"
             name="&lt;scene_map&gt;_scene"
             isLeaf="false"

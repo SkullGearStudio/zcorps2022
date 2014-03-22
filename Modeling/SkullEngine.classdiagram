@@ -267,9 +267,6 @@
                 <property Id="990e3ab7-0995-4912-a84e-53299c87c42a" name="&lt;bool&gt;_exit" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="1f8d436f-c20a-43d6-9598-a7643cad1f5c" />
                 </property>
-                <property Id="111366cb-3d76-4c12-a437-8a1482ca1bd1" name="&lt;Game&amp;&gt;_main" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="c35db816-7d67-4825-ac83-52fc77558a56" />
-                </property>
                 <property Id="a9a8e56f-073c-4611-ae2d-f2a27e93686e" name="&lt;scene_map&gt;_scene" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="0f7da48a-94c1-43db-8702-74c0388382de" />
                 </property>

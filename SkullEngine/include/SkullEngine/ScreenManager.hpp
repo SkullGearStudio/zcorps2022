@@ -9,6 +9,11 @@
 
 namespace SkullEngine
 {
+    namespace Window
+    {
+        class Window;
+    }
+
     namespace ScreenManager
     {
         class SKULLENGINE_API ScreenManager
@@ -18,7 +23,7 @@ namespace SkullEngine
             typedef std::list<Screen *> screen_list;
 
         public:
-            ScreenManager(void);
+            ScreenManager(Window::Window &);
             ~ScreenManager(void) {};
 
             void	AddScreen(Screen &);
@@ -26,12 +31,14 @@ namespace SkullEngine
             void	ActiveScreen(const std::string &);
             void	UnactiveScreen(const std::string &);
             void	UnactiveScreen(Screen *);
-            void	Dump();
-            void	Run();
+            const   Window::Window  &Win() const;
+            void	Dump() const;
+            void	Run() const;
 
         private:
             screen_map *_screens;
             screen_list *_actives;
+            Window::Window  &_win;
         };
     }
 }

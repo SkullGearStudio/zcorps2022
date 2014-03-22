@@ -5,7 +5,8 @@
 
 #include "SkullEngine.hpp"
 #include "Types.hpp"
-#include "AGameScreen.hpp"
+#include "AssetManager.hpp"
+#include "Scene.hpp"
 
 namespace SkullEngine
 {
@@ -13,27 +14,28 @@ namespace SkullEngine
     {
         class SKULLENGINE_API Window
         {
+        private:
+            typedef std::map<std::string, Scene *> scene_map;
         public:
             // CTOR / DTOR
             Window(WindowType, uint, uint, const std::string &, Screen &);
             ~Window() {};
 
             // GETTER
-            //AssetManager &ASM();
+            Asset::AssetManager &ASM();
 
             // FCT
-            void    AddScene(/*Scene &*/);
+            void    AddScene(Scene &);
             void    LoadScene(const std::string &);
-            void    Exit();
-            void    Run();
+            void    Exit() const;
+            void    Run() const;
 
 
         private:
-            //AssetManager  &_asm;
+            Asset::AssetManager  &_assets;
             bool    _exit;
-            //Game  &_main;
-            //Scene *_current;
-            //scene_map   _scenes;
+            Scene *_current;
+            scene_map   _scenes;
             ScreenManager::ScreenManager     &_scm;
             sf::RenderWindow *_render;
         };

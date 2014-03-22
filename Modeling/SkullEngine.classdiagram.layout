@@ -69,11 +69,11 @@
     <packageShape Id="ced559d8-d67b-453e-afc8-225acaff1220" absoluteBounds="5.125, 4.125, 5.375, 3.875" customColor="255, 249, 230" hideQualifiedName="false">
       <packageMoniker Id="7eeac745-c8f4-40ef-a385-58725a9b8bf4" LastKnownName="Window" />
       <nestedChildShapes>
-        <classShape Id="f6976bd3-9d28-4a8d-89eb-9491c415640b" absoluteBounds="5.25, 4.75, 2.875, 2.9843749205271397" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+        <classShape Id="f6976bd3-9d28-4a8d-89eb-9491c415640b" absoluteBounds="5.25, 4.75, 2.875, 2.824218675494194" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
           <classMoniker Id="4e2f723e-cd71-474c-8c6f-c87d6632dbfb" LastKnownName="Window" />
           <nestedChildShapes>
-            <AttributeElementListCompartment Id="25ea5861-1adb-4f2b-af9d-afb14c0e77d0" absoluteBounds="5.265, 5.14, 2.8449999999999998, 1.3222655827800431" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-            <OperationElementListCompartment Id="a2e55e2f-7375-46f8-bdcc-86e9dcc92749" absoluteBounds="5.265, 6.472265582780043, 2.8449999999999998, 1.1621093377470972" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <AttributeElementListCompartment Id="25ea5861-1adb-4f2b-af9d-afb14c0e77d0" absoluteBounds="5.265, 5.14, 2.8449999999999998, 1.162109337747097" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="a2e55e2f-7375-46f8-bdcc-86e9dcc92749" absoluteBounds="5.265, 6.3121093377470974, 2.8449999999999998, 1.1621093377470972" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </classShape>
         <classShape Id="2bccaaa8-4009-492b-88dc-bd6ca293cb01" absoluteBounds="8.25, 4.75, 2.125, 1.3828124701976767" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">

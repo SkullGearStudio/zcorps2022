@@ -5,9 +5,10 @@ namespace SkullEngine
 {
     namespace ScreenManager
     {
-        ScreenManager::ScreenManager() :
+        ScreenManager::ScreenManager(Window::Window &w) :
             _screens(new screen_map),
-            _actives(new screen_list)
+            _actives(new screen_list),
+            _win(w)
         {
         }
         void	ScreenManager::AddScreen(Screen &screen)
@@ -99,6 +100,10 @@ namespace SkullEngine
                 ++it;
             }
             maxLayer->PopUp();
+        }
+        const Window::Window &ScreenManager::Win() const
+        {
+            return _win;
         }
     }
 }
