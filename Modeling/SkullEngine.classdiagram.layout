@@ -10,7 +10,7 @@
       </nestedChildShapes>
     </classShape>
     <classShape Id="62012a37-f6c2-4cba-9f0d-468b6dd546a9" absoluteBounds="11.5, 0.625, 2.5, 1.8632812052965164" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-      <classMoniker Id="f430be0e-1202-4954-8539-a7f2d9b2f709" LastKnownName="GameCore" />
+      <classMoniker Id="f430be0e-1202-4954-8539-a7f2d9b2f709" LastKnownName="Core" />
       <nestedChildShapes>
         <AttributeElementListCompartment Id="6d78b1f2-fd4e-42e8-9049-5a41d9228a05" absoluteBounds="11.515, 1.0150000000000001, 2.4699999999999998, 0.84179684768120444" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="5dd02fe9-8aec-43fb-b46a-68b192a1761d" absoluteBounds="11.515, 1.8667968476812045, 2.4699999999999998, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
@@ -55,7 +55,7 @@
         </classShape>
       </nestedChildShapes>
     </packageShape>
-    <packageImportConnector edgePoints="[(5.125 : 2.25); (4.375 : 2.25)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+    <packageImportConnector edgePoints="[(5.125 : 2.25); (4.375 : 2.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
       <packageImportMoniker Id="1c63be7d-773a-48af-90be-7b377c266f30" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>

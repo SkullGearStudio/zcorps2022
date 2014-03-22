@@ -73,7 +73,7 @@
     <packageHasNamedElement>
       <class
         Id="98c1be00-8d81-493e-8d0a-c2beed889d12"
-        name="GameCore"
+        name="Core"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">

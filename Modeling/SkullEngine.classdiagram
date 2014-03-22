@@ -217,7 +217,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="f430be0e-1202-4954-8539-a7f2d9b2f709" name="GameCore" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="f430be0e-1202-4954-8539-a7f2d9b2f709" name="Core" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="98c1be00-8d81-493e-8d0a-c2beed889d12" />
         <ownedAttributesInternal>
           <property Id="71a010df-c716-4d72-893d-71ba8df4befa" name="&lt;AssetManager&gt; _assets" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">

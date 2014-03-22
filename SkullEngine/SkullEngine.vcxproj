@@ -14,16 +14,18 @@
     <ClInclude Include="include\SkullEngine\AGameScreen.hpp" />
     <ClInclude Include="include\SkullEngine\AssetManager.hpp" />
     <ClInclude Include="include\SkullEngine\Exception.hpp" />
-    <ClInclude Include="include\SkullEngine\GameCore.hpp" />
+    <ClInclude Include="include\SkullEngine\Core.hpp" />
     <ClInclude Include="include\SkullEngine\IAsset.hpp" />
     <ClInclude Include="include\SkullEngine\IGameScreen.hpp" />
     <ClInclude Include="include\SkullEngine\ScreenManager.hpp" />
     <ClInclude Include="include\SkullEngine\SkullEngine.hpp" />
     <ClInclude Include="include\SkullEngine\Types.hpp" />
     <ClInclude Include="include\SkullEngine\Window.hpp" />
+    <ClInclude Include="Scene.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AGameScreen.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="ScreenManager.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
