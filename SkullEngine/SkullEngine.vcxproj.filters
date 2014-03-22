@@ -48,11 +48,11 @@
     <ClInclude Include="include\SkullEngine\SkullEngine.hpp">
       <Filter>Misc</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.hpp">
-      <Filter>Engine\Window</Filter>
-    </ClInclude>
     <ClInclude Include="include\SkullEngine\Core.hpp">
       <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\Scene.hpp">
+      <Filter>Engine\Window</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -18,15 +18,18 @@ namespace SkullEngine
             typedef std::map<std::string, Scene *> scene_map;
         public:
             // CTOR / DTOR
-            Window(WindowType, uint, uint, const std::string &, Screen &);
+            Window(WindowType, uint, uint, const std::string &, Scene &);
             ~Window() {};
 
             // GETTER
             Asset::AssetManager &ASM();
 
+
             // FCT
             void    AddScene(Scene &);
             void    LoadScene(const std::string &);
+            const sf::RenderWindow &Render();
+            void    Start();
             void    Exit() const;
             void    Run() const;
 
