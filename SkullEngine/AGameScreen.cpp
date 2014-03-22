@@ -9,7 +9,7 @@ namespace SkullEngine
             _active(false),
             _popup(false),
             _layer(100),
-            _name(n),
+            _name(new std::string(n)),
             _manager(m)
         {
         }
@@ -28,7 +28,7 @@ namespace SkullEngine
         }
         const std::string &AGameScreen::Name() const
         {
-            return _name;
+            return *_name;
         }
         const ScreenManager::ScreenManager &AGameScreen::Manager() const
         {

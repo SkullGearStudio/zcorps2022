@@ -5,23 +5,28 @@ namespace SkullEngine
 {
     namespace ScreenManager
     {
+        ScreenManager::ScreenManager() :
+            _screens(new screen_map),
+            _actives(new screen_list)
+        {
+        }
         void	ScreenManager::AddScreen(Screen &screen)
         {
-            _screens[screen.Name()] = &screen;
+            (*_screens)[screen.Name()] = &screen;
         }
         void	ScreenManager::RemoveScreen(const std::string &screenName)
         {
-            screen_map::iterator it = _screens.find(screenName);
+            screen_map::iterator it = _screens->find(screenName);
             Screen	*selected;
 
             try
             {
-                if (it == _screens.end())
+                if (it == _screens->end())
                     throw Exception(std::string("Screen [" + screenName + "] doesn't exist").c_str());
                 selected = it->second;
                 if (selected->IsActive())
                     UnactiveScreen(selected);
-                _screens.erase(it);
+                _screens->erase(it);
             } catch (Exception ex)
             {
                 ex.box();
@@ -30,24 +35,24 @@ namespace SkullEngine
         }
         void	ScreenManager::ActiveScreen(const std::string &screenName)
         {
-            screen_map::iterator it = _screens.find(screenName);
-            screen_list::iterator l = _actives.begin();
+            screen_map::iterator it = _screens->find(screenName);
+            screen_list::iterator l = _actives->begin();
             Screen	*selected;
 
             try
             {
-                if (it == _screens.end())
+                if (it == _screens->end())
                     throw Exception(std::string("Screen [" + screenName + "] doesn't exist").c_str());
                 selected = it->second;
                 selected->On();
                 selected->PopUp();
-                while (l != _actives.end())
+                while (l != _actives->end())
                 {
                     (*l)->LayerDown();
                     (*l)->PopDown();
                     ++l;
                 }
-                _actives.push_front(selected);
+                _actives->push_front(selected);
             } catch (Exception ex)
             {
                 ex.box();
@@ -56,12 +61,12 @@ namespace SkullEngine
         }
         void	ScreenManager::UnactiveScreen(const std::string &screenName)
         {
-            screen_map::iterator it = _screens.find(screenName);
+            screen_map::iterator it = _screens->find(screenName);
             Screen	*selected;
 
             try
             {
-                if (it == _screens.end())
+                if (it == _screens->end())
                     throw Exception(std::string("Screen [" + screenName + "] doesn't exist").c_str());
                 selected = it->second;
                 UnactiveScreen(selected);
@@ -74,19 +79,19 @@ namespace SkullEngine
         void	ScreenManager::UnactiveScreen(Screen *screen)
         {
             Screen *maxLayer = NULL;
-            screen_list::iterator it = _actives.begin();
+            screen_list::iterator it = _actives->begin();
 
             screen->Off();
             screen->PopDown();
-            while (it != _actives.end())
+            while (it != _actives->end())
             {
                 if ((*it)->Name() == screen->Name())
-                    _actives.erase(it);
+                    _actives->erase(it);
                 ++it;
             }
-            it = _actives.begin();
+            it = _actives->begin();
             maxLayer = *it;
-            while (it != _actives.end())
+            while (it != _actives->end())
             {
                 (*it)->LayerUp();
                 if (maxLayer->Layer() < (*it)->Layer())
