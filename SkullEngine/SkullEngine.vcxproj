@@ -96,8 +96,11 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy SFML-2.1\dlld\*.dll $(SolutionDir)$(Configuration)\
-copy $(Configuration)\$(TargetName).dll $(SolutionDir)$(Configuration)\</Command>
+      <Command>del /Q bin\*
+del /Q lib\*
+copy SFML-2.1\dll\*.dll bin\
+copy $(Configuration)\$(TargetName).dll bin\
+copy $(Configuration)\$(TargetName).lib lib\</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>copying lib and engine dll</Message>
@@ -129,8 +132,11 @@ copy $(Configuration)\$(TargetName).dll $(SolutionDir)$(Configuration)\</Command
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy SFML-2.1\dll\*.dll  $(SolutionDir)$(Configuration)\
-copy $(Configuration)\$(TargetName).dll $(SolutionDir)$(Configuration)\</Command>
+      <Command>del /Q bin\*
+del /Q lib\*
+copy SFML-2.1\dll\*.dll bin\
+copy $(Configuration)\$(TargetName).dll bin\
+copy $(Configuration)\$(TargetName).lib lib\</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>copying lib and engine dll</Message>
