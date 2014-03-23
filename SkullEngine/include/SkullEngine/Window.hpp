@@ -29,7 +29,7 @@ namespace SkullEngine
             // FCT
             void    AddScene(Scene &);
             void    LoadScene(const std::string &);
-            void    LoadScene(Scene &);
+            void    LoadScene(Scene &); // TODO
             const sf::RenderWindow &Render();
             void    Start();
             void    Exit() const;
