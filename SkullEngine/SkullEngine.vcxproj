@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClInclude Include="include\SkullEngine\AGameScreen.hpp" />
     <ClInclude Include="include\SkullEngine\AssetManager.hpp" />
+    <ClInclude Include="include\SkullEngine\Assets.hpp" />
     <ClInclude Include="include\SkullEngine\Exception.hpp" />
     <ClInclude Include="include\SkullEngine\Core.hpp" />
     <ClInclude Include="include\SkullEngine\AAsset.hpp" />
@@ -30,8 +31,10 @@
     <ClCompile Include="AGameScreen.cpp" />
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="Core.cpp" />
+    <ClCompile Include="Image.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="ScreenManager.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

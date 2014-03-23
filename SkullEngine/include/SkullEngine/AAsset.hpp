@@ -12,7 +12,7 @@ namespace SkullEngine
         {
         public:
             AAsset(const std::string &);
-            ~AAsset(void) {};
+            virtual ~AAsset(void) {};
 
             const std::string &Name();
 

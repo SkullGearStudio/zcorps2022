@@ -63,6 +63,9 @@
     <ClInclude Include="include\SkullEngine\Image.hpp">
       <Filter>Engine\Asset\AssetsType</Filter>
     </ClInclude>
+    <ClInclude Include="include\SkullEngine\Assets.hpp">
+      <Filter>Engine\Asset</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AGameScreen.cpp">
@@ -85,6 +88,12 @@
     </ClCompile>
     <ClCompile Include="AssetManager.cpp">
       <Filter>Engine\Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Engine\Asset\AssetsType</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Engine\Asset\AssetsType</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

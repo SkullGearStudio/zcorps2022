@@ -8,19 +8,13 @@ namespace SkullEngine
 {
     namespace Asset
     {
-        class Image : AAsset
+        class SKULLENGINE_API Image : public AAsset
         {
         public:
-            Image(const std::string &name, Texture &texture) :
-                AAsset(name)
-            {
-                _spr.setTexture(texture.res());
-            }
-            ~Image() {};
-            sf::Sprite &res()
-            {
-                return _spr;
-            }
+            Image(const std::string &, Texture &);
+            ~Image() {}
+
+            sf::Sprite  &res();
 
         private:
             sf::Sprite _spr;

@@ -8,23 +8,13 @@ namespace SkullEngine
 {
     namespace Asset
     {
-        class SKULLENGINE_API Texture : AAsset
+        class SKULLENGINE_API Texture : public AAsset
         {
         public:
-            Texture(const std::string &name, const std::string &file) :
-                AAsset(name)
-            {
-                if (!_tex.loadFromFile(file))
-                {
-                    system("PAUSE");
-                    exit(-1);
-                }
-            }
-            ~Texture() {};
-            sf::Texture &res()
-            {
-                return _tex;
-            }
+            Texture(const std::string &, const std::string &);
+            ~Texture(void) {};
+
+            sf::Texture &res();
 
         private:
             sf::Texture _tex;
