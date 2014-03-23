@@ -15,7 +15,7 @@ namespace SkullEngine
             typedef std::map<std::string, AAsset *> asset_map;
 
         public:
-            AssetManager(void) {};
+            AssetManager(void);
             ~AssetManager(void) {};
             AAsset &GetAsset(const std::string &) const; // TODO
             void    LoadAsset(AAsset &); // TODO

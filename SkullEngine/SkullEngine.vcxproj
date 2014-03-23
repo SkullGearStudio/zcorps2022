@@ -26,6 +26,7 @@
   <ItemGroup>
     <ClCompile Include="AAsset.cpp" />
     <ClCompile Include="AGameScreen.cpp" />
+    <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="ScreenManager.cpp" />

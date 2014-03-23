@@ -74,5 +74,8 @@
     <ClCompile Include="AAsset.cpp">
       <Filter>Engine\Asset</Filter>
     </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>Engine\Asset</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
