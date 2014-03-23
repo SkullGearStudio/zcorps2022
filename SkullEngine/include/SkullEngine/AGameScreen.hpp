@@ -13,7 +13,7 @@ namespace SkullEngine
         class SKULLENGINE_API AGameScreen : public IGameScreen
         {
         public:
-            AGameScreen(ScreenManager::ScreenManager &, std::string &);
+            AGameScreen(ScreenManager::ScreenManager &, const std::string &);
             virtual ~AGameScreen(void) {};
 
             virtual void Init() const = 0;

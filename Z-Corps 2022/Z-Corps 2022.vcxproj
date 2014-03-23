@@ -45,7 +45,7 @@
     <OutDir>$(Configuration)\</OutDir>
     <TargetName>ZCorps2022</TargetName>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
@@ -59,8 +59,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\SkullEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <EnablePREfast>true</EnablePREfast>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SkullEngine\include;$(SolutionDir)\SkullEngine\SFML-2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnablePREfast>false</EnablePREfast>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -68,14 +68,13 @@
       <AdditionalDependencies>SkullEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>
-      </Command>
-      <Message>
-      </Message>
+      <Command>del /Q $(SolutionDir)$(Configuration)\*.dll</Command>
+      <Message>Cleaning folder</Message>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>copy $(Configuration)\$(TargetName).exe $(SolutionDir)$(Configuration)\
-copy $(SolutionDir)SkullEngine\bin\*.dll $(SolutionDir)$(Configuration)</Command>
+copy $(SolutionDir)SkullEngine\bin\*.dll $(SolutionDir)$(Configuration)
+XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/i</Command>
       <Message>copying game exec</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -86,7 +85,7 @@ copy $(SolutionDir)SkullEngine\bin\*.dll $(SolutionDir)$(Configuration)</Command
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\SkullEngine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\SkullEngine\include;$(SolutionDir)\SkullEngine\SFML-2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName />
     </ClCompile>
     <Link>
@@ -97,19 +96,22 @@ copy $(SolutionDir)SkullEngine\bin\*.dll $(SolutionDir)$(Configuration)</Command
       <AdditionalDependencies>SkullEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>
-      </Command>
-      <Message>
-      </Message>
+      <Command>del /Q $(SolutionDir)$(Configuration)\*.dll</Command>
+      <Message>Cleaning folder</Message>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>copy $(Configuration)\$(TargetName).exe $(SolutionDir)$(Configuration)\
-copy $(SolutionDir)SkullEngine\bin * $(SolutionDir)$(Configuration)</Command>
+copy $(SolutionDir)SkullEngine\bin\*.dll $(SolutionDir)$(Configuration)
+XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/i</Command>
       <Message>copying game exec</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SplashScreen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SplashScreen.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,7 +6,6 @@ namespace SkullEngine
     {
         _windows.push(&w);
     }
-
     void    Core::Run()
     {
         while (!_windows.empty())
@@ -17,5 +16,9 @@ namespace SkullEngine
             while (_current->Render().isOpen())
                 _current->Run();
         }
+    }
+    Asset::AssetManager &Core::Assets()
+    {
+        return _assets;
     }
 }

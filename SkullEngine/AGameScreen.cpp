@@ -5,7 +5,7 @@ namespace SkullEngine
 {
     namespace GameScreen
     {
-        AGameScreen::AGameScreen(ScreenManager::ScreenManager &m, std::string &n) :
+        AGameScreen::AGameScreen(ScreenManager::ScreenManager &m, const std::string &n) :
             _active(false),
             _popup(false),
             _layer(100),

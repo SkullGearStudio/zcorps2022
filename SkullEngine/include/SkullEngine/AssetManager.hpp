@@ -17,9 +17,9 @@ namespace SkullEngine
         public:
             AssetManager(void);
             ~AssetManager(void) {};
-            AAsset &GetAsset(const std::string &) const; // TODO
-            void    LoadAsset(AAsset &); // TODO
-            void    UnloadAsset(const std::string &); // TODO
+            AAsset &GetAsset(const std::string &) const;
+            void    LoadAsset(AAsset &);
+            void    UnloadAsset(const std::string &);
 
         private:
             asset_map   *_assets;

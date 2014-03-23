@@ -19,6 +19,9 @@
     <Filter Include="Misc">
       <UniqueIdentifier>{d5972009-a8c4-4c96-85cd-587374c6ff97}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Asset\AssetsType">
+      <UniqueIdentifier>{65675745-3621-4587-a81b-6beac81504f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\SkullEngine\AssetManager.hpp">
@@ -53,6 +56,12 @@
     </ClInclude>
     <ClInclude Include="include\SkullEngine\AAsset.hpp">
       <Filter>Engine\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\Texture.hpp">
+      <Filter>Engine\Asset\AssetsType</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SkullEngine\Image.hpp">
+      <Filter>Engine\Asset\AssetsType</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

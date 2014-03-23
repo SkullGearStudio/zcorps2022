@@ -17,9 +17,11 @@
     <ClInclude Include="include\SkullEngine\Core.hpp" />
     <ClInclude Include="include\SkullEngine\AAsset.hpp" />
     <ClInclude Include="include\SkullEngine\IGameScreen.hpp" />
+    <ClInclude Include="include\SkullEngine\Image.hpp" />
     <ClInclude Include="include\SkullEngine\Scene.hpp" />
     <ClInclude Include="include\SkullEngine\ScreenManager.hpp" />
     <ClInclude Include="include\SkullEngine\SkullEngine.hpp" />
+    <ClInclude Include="include\SkullEngine\Texture.hpp" />
     <ClInclude Include="include\SkullEngine\Types.hpp" />
     <ClInclude Include="include\SkullEngine\Window.hpp" />
   </ItemGroup>
@@ -66,7 +68,7 @@
     <OutDir>$(Configuration)\</OutDir>
     <ExtensionsToDeleteOnClean>.dll;$(ExtensionsToDeleteOnClean)</ExtensionsToDeleteOnClean>
     <IncludePath>include\SkullEngine\;$(IncludePath)</IncludePath>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -83,7 +85,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SKULLENGINE_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)SFML-2.1\include</AdditionalIncludeDirectories>
-      <EnablePREfast>true</EnablePREfast>
+      <EnablePREfast>false</EnablePREfast>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -98,9 +100,9 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>del /Q bin\*
-del /Q lib\*
-copy SFML-2.1\dll\*.dll bin\
+      <Command>del /Q bin\*.dll
+del /Q lib\*.lib
+copy SFML-2.1\dlld\*.dll bin\
 copy $(Configuration)\$(TargetName).dll bin\
 copy $(Configuration)\$(TargetName).lib lib\</Command>
     </PostBuildEvent>
@@ -134,8 +136,8 @@ copy $(Configuration)\$(TargetName).lib lib\</Command>
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>del /Q bin\*
-del /Q lib\*
+      <Command>del /Q bin\*.dll
+del /Q lib\*.lib
 copy SFML-2.1\dll\*.dll bin\
 copy $(Configuration)\$(TargetName).dll bin\
 copy $(Configuration)\$(TargetName).lib lib\</Command>

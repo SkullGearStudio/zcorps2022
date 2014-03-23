@@ -18,6 +18,7 @@ namespace SkullEngine
 
         void AddWindow(Window::Window &);
         void Run();
+        Asset::AssetManager &Assets();
 
     private:
         Asset::AssetManager _assets;
