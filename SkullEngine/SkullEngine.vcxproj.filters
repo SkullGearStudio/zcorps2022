@@ -24,9 +24,6 @@
     <ClInclude Include="include\SkullEngine\AssetManager.hpp">
       <Filter>Engine\Asset</Filter>
     </ClInclude>
-    <ClInclude Include="include\SkullEngine\IAsset.hpp">
-      <Filter>Engine\Asset</Filter>
-    </ClInclude>
     <ClInclude Include="include\SkullEngine\AGameScreen.hpp">
       <Filter>Engine\GameScreen</Filter>
     </ClInclude>
@@ -54,6 +51,9 @@
     <ClInclude Include="include\SkullEngine\Scene.hpp">
       <Filter>Engine\Window</Filter>
     </ClInclude>
+    <ClInclude Include="include\SkullEngine\AAsset.hpp">
+      <Filter>Engine\Asset</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AGameScreen.cpp">
@@ -70,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="Core.cpp">
       <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="AAsset.cpp">
+      <Filter>Engine\Asset</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

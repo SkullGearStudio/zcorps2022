@@ -3,7 +3,7 @@
 #include <map>
 
 #include "SkullEngine.hpp"
-#include "IAsset.hpp"
+#include "AAsset.hpp"
 
 namespace SkullEngine
 {
@@ -12,13 +12,13 @@ namespace SkullEngine
         class SKULLENGINE_API AssetManager
         {
         private:
-            typedef std::map<std::string, IAsset *> asset_map;
+            typedef std::map<std::string, AAsset *> asset_map;
 
         public:
             AssetManager(void) {};
             ~AssetManager(void) {};
-            IAsset &GetAsset(const std::string &) const; // TODO
-            void    LoadAsset(IAsset &); // TODO
+            AAsset &GetAsset(const std::string &) const; // TODO
+            void    LoadAsset(AAsset &); // TODO
             void    UnloadAsset(const std::string &); // TODO
 
         private:

@@ -15,7 +15,7 @@
     <ClInclude Include="include\SkullEngine\AssetManager.hpp" />
     <ClInclude Include="include\SkullEngine\Exception.hpp" />
     <ClInclude Include="include\SkullEngine\Core.hpp" />
-    <ClInclude Include="include\SkullEngine\IAsset.hpp" />
+    <ClInclude Include="include\SkullEngine\AAsset.hpp" />
     <ClInclude Include="include\SkullEngine\IGameScreen.hpp" />
     <ClInclude Include="include\SkullEngine\Scene.hpp" />
     <ClInclude Include="include\SkullEngine\ScreenManager.hpp" />
@@ -24,6 +24,7 @@
     <ClInclude Include="include\SkullEngine\Window.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AAsset.cpp" />
     <ClCompile Include="AGameScreen.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="Scene.cpp" />
