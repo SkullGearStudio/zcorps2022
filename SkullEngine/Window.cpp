@@ -4,18 +4,22 @@ namespace SkullEngine
 {
     namespace Window
     {
-        Window::Window(WindowType t, uint w, uint h, const std::string &n, Scene &fs, Asset::AssetManager &a) :
+        Window::Window(WindowType t, uint w, uint h, const std::string &n, Asset::AssetManager &a) :
             _type(t),
             _width(w),
             _height(h),
             _name(new std::string(n)),
             _assets(a),
             _exit(false),
-            _current(&fs),
             _scm(new ScreenManager::ScreenManager(*this))
         {
         }
 
+        void    Window::FirstScene(Scene &s)
+        {
+            _scenes[s.Name()] = &s;
+            _current = &s;
+        }
         void    Window::AddScene(Scene &s)
         {
             _scenes[s.Name()] = &s;

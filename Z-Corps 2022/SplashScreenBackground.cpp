@@ -3,18 +3,17 @@
 #include "SkullEngine\Window.hpp"
 
 
-SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &scm) :
-    AGameScreen(scm, "Splash Screen")
+SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &scm, SkullEngine::Asset::AssetManager &am, SkullEngine::Window::Window &w) :
+    AGameScreen(scm, am, w, "Splash Screen")
 {
 }
 
 void    SplashScreenBackground::Init()
 {
-    _background = &reinterpret_cast<SkullEngine::Asset::Image &>(Manager().Win().ASM().GetAsset("splash_background_image"));
     On();
+    _background = &dynamic_cast<SkullEngine::Asset::Image &>(_assets.GetAsset("splash_background_image"));
 }
 
 void    SplashScreenBackground::Draw()
 {
-    Manager().Win().Render().draw(_background->res());
 }

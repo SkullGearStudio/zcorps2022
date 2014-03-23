@@ -20,7 +20,7 @@ namespace SkullEngine
             typedef std::list<Screen *> screen_list;
         public:
             // CTOR / DTOR
-            Window(WindowType, uint, uint, const std::string &, Scene &, Asset::AssetManager &);
+            Window(WindowType, uint, uint, const std::string &, Asset::AssetManager &);
             ~Window() {};
 
             // GETTER
@@ -28,6 +28,7 @@ namespace SkullEngine
             ScreenManager::ScreenManager    &Window::Manager();
 
             // FCT
+            void    FirstScene(Scene &);
             void    AddScene(Scene &);
             void    LoadScene(const std::string &);
             void    LoadScene(Scene &); // TODO

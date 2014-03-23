@@ -1,16 +1,18 @@
-#include "SkullEngine/AGameScreen.hpp"
-#include "SkullEngine/Exception.hpp"
+#include "SkullEngine\AGameScreen.hpp"
+#include "SkullEngine\Exception.hpp"
 
 namespace SkullEngine
 {
     namespace GameScreen
     {
-        AGameScreen::AGameScreen(ScreenManager::ScreenManager &m, const std::string &n) :
+        AGameScreen::AGameScreen(ScreenManager::ScreenManager &sm, Asset::AssetManager &am, Window::Window &w, const std::string &n) :
             _active(false),
             _popup(false),
             _layer(100),
             _name(new std::string(n)),
-            _manager(m)
+            _manager(sm),
+            _assets(am),
+            _win(w)
         {
         }
 
@@ -29,10 +31,6 @@ namespace SkullEngine
         const std::string &AGameScreen::Name() const
         {
             return *_name;
-        }
-        ScreenManager::ScreenManager &AGameScreen::Manager() const
-        {
-            return _manager;
         }
 
         void AGameScreen::On()

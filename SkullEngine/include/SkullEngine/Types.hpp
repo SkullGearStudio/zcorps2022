@@ -10,6 +10,14 @@ namespace SkullEngine
     {
         class ScreenManager;
     }
+    namespace Asset
+    {
+        class AssetManager;
+    }
+    namespace Window
+    {
+        class Window;
+    }
 
     typedef unsigned short  ushort;
     typedef unsigned int    uint;

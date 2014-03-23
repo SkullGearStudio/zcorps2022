@@ -12,7 +12,7 @@ namespace SkullEngine
         class AGameScreen : public IGameScreen
         {
         public:
-            AGameScreen(ScreenManager::ScreenManager &, const std::string &);
+            AGameScreen(ScreenManager::ScreenManager &, Asset::AssetManager &, Window::Window &, const std::string &);
             virtual ~AGameScreen(void) {};
 
             virtual void Init() = 0;
@@ -25,7 +25,6 @@ namespace SkullEngine
             bool IsPopup() const;
             ushort Layer() const;
             const std::string &Name() const;
-            ScreenManager::ScreenManager &Manager() const;
 
             void On();
             void Off();
@@ -40,6 +39,8 @@ namespace SkullEngine
             ushort      _layer;
             std::string *_name;
             ScreenManager::ScreenManager &_manager;
+            Asset::AssetManager &_assets;
+            Window::Window &_win;
         };
     }
 }
