@@ -40,7 +40,7 @@ namespace SkullEngine
             try
             {
                 if (IsActive())
-                    throw Exception(std::string("Screen [" + Name() + "] is already active").c_str());
+                    throw Exception("Screen [" + Name() + "] is already active");
                 _active = true;
             } catch (Exception ex)
             {
@@ -53,7 +53,7 @@ namespace SkullEngine
             try
             {
                 if (!IsActive())
-                    throw Exception(std::string("Screen [" + Name() + "] is already unactive").c_str());
+                    throw Exception("Screen [" + Name() + "] is already unactive");
                 _active = false;
             } catch (Exception ex)
             {
@@ -66,7 +66,7 @@ namespace SkullEngine
             try
             {
                 if (IsPopup())
-                    throw Exception(std::string("Screen [" + Name() + "] is already on top").c_str());
+                    throw Exception("Screen [" + Name() + "] is already on top");
                 _popup = true;
             } catch (Exception ex)
             {
@@ -79,7 +79,7 @@ namespace SkullEngine
             try
             {
                 if (!IsPopup())
-                    throw Exception(std::string("Screen [" + Name() + "] is already on background").c_str());
+                    throw Exception("Screen [" + Name() + "] is already on background");
                 _popup = false;
             } catch (Exception ex)
             {

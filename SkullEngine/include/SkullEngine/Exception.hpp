@@ -10,11 +10,11 @@ namespace SkullEngine
     struct SKULLENGINE_API Exception : public std::exception
     {
         // ATTR
-        const char *_msg;
+        std::string *_msg;
         //METHODS
-        Exception(const char *msg) : _msg(msg) {}
+        Exception(const std::string &msg) : _msg(new std::string(msg)) {}
         ~Exception() throw () {}
-        const char *what() const throw() { return _msg; }
-        void box() { ::MessageBoxA(NULL, _msg, "Exception", MB_OK | MB_ICONERROR); }
+        const char *what() const throw() { return _msg->c_str(); }
+        void box() { ::MessageBoxA(NULL, _msg->c_str(), "Exception", MB_OK | MB_ICONERROR); delete _msg;}
     };
 }

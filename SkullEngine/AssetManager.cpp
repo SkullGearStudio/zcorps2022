@@ -1,4 +1,5 @@
 #include "AssetManager.hpp"
+#include "Exception.hpp"
 
 namespace SkullEngine
 {
@@ -12,8 +13,17 @@ namespace SkullEngine
         {
             asset_map::iterator it = _assets->find(name);
 
+            try
+            {
             if (it != _assets->end())
                 return *(it->second);
+            else
+                throw Exception("Unable to get asset [" + name + "]");
+            } catch (Exception ex)
+            {
+                ex.box();
+                exit(-1);
+            }
         }
         void    AssetManager::LoadAsset(AAsset &as)
         {
