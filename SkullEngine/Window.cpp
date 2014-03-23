@@ -29,6 +29,16 @@ namespace SkullEngine
         }
         void    Window::LoadScene(Scene &s)
         {
+            screen_list::iterator it = s.Screens().begin();
+
+            _scm->Purge();
+            while (it != s.Screens().end())
+            {
+                Screen &current = *(*it);
+                _scm->LoadFromScene(current);
+                ++it;
+            }
+            _scm->OrderActive();
         }
         const sf::RenderWindow  &Window::Render()
         {

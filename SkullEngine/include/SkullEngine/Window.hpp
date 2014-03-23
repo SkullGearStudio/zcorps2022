@@ -17,6 +17,7 @@ namespace SkullEngine
         {
         private:
             typedef std::map<std::string, Scene *> scene_map;
+            typedef std::list<Screen *> screen_list;
         public:
             // CTOR / DTOR
             Window(WindowType, uint, uint, const std::string &, Scene &, Asset::AssetManager &);

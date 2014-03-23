@@ -23,6 +23,14 @@ namespace SkullEngine
             (*_screens)[screen.Name()] = &screen;
             screen.Init();
         }
+        void    ScreenManager::LoadFromScene(Screen &sc)
+        {
+            (*_screens)[sc.Name()] = &sc;
+            sc.Init();
+            if (sc.IsActive())
+                _actives->push_front(&sc);
+            OrderActive();
+        }
         void	ScreenManager::RemoveScreen(const std::string &screenName)
         {
             screen_map::iterator it = _screens->find(screenName);
@@ -35,7 +43,7 @@ namespace SkullEngine
                 selected = it->second;
                 if (selected->IsActive())
                     UnactiveScreen(selected);
-                selected->Destroy();
+                //selected->Destroy();
                 _screens->erase(it);
             } catch (Exception ex)
             {
@@ -63,7 +71,7 @@ namespace SkullEngine
                     ++l;
                 }
                 _actives->push_front(selected);
-                _actives->sort(LayerComp);
+                OrderActive();
             } catch (Exception ex)
             {
                 ex.box();
@@ -99,7 +107,7 @@ namespace SkullEngine
                     _actives->erase(it);
                 ++it;
             }            
-            _actives->sort(LayerComp);
+            OrderActive();
             it = _actives->begin();
             (*it)->PopUp();
         }
@@ -107,16 +115,33 @@ namespace SkullEngine
         {
             return _win;
         }
-
-        void    ScreenManager::Run() const
+        void    ScreenManager::OrderActive()
+        {
+            _actives->sort(LayerComp);
+        }
+        void    ScreenManager::Break()
+        {
+            break_r = true;
+        }
+        void    ScreenManager::Purge()
+        {
+            while (!_screens->empty())
+                RemoveScreen(_screens->begin()->second->Name());
+        }
+        void    ScreenManager::Run()
         {
             screen_list::iterator it = _actives->begin();
 
+            break_r = false;
             while (it != _actives->end())
             {
                 if ((*it)->IsPopup())
                     (*it)->Event();
+                if (break_r)
+                    break;
                 (*it)->Update();
+                if (break_r)
+                    break;
                 (*it)->Draw();
                 ++it;
             }

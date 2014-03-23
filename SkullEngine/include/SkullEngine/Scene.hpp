@@ -21,7 +21,7 @@ namespace SkullEngine
 
             void AddScreen(Screen &);
             const std::string &Name();
-            const screen_list &Screens() const;
+            screen_list &Screens() const;
 
         private:
             screen_list *_screens;

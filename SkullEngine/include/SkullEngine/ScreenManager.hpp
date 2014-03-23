@@ -27,17 +27,22 @@ namespace SkullEngine
             ~ScreenManager(void) {};
 
             void	AddScreen(Screen &);
+            void    LoadFromScene(Screen &);
             void	RemoveScreen(const std::string &);
             void	ActiveScreen(const std::string &);
             void	UnactiveScreen(const std::string &);
             void	UnactiveScreen(Screen *);
             const   Window::Window  &Win() const;
-            void	Run() const;
+            void    OrderActive();
+            void    Break();
+            void    Purge();
+            void	Run();
 
         private:
             screen_map *_screens;
             screen_list *_actives;
             Window::Window  &_win;
+            bool    break_r;
         };
     }
 }

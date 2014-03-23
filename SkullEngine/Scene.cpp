@@ -18,7 +18,7 @@ namespace SkullEngine
         {
             return *_name;
         }
-        const Scene::screen_list &Scene::Screens() const
+        Scene::screen_list &Scene::Screens() const
         {
             return *_screens;
         }
