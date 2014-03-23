@@ -3,7 +3,6 @@
 #include <map>
 #include <list>
 
-#include "SkullEngine.hpp"
 #include "AGameScreen.hpp"
 #include "Types.hpp"
 
@@ -16,7 +15,7 @@ namespace SkullEngine
 
     namespace ScreenManager
     {
-        class SKULLENGINE_API ScreenManager
+        class ScreenManager
         {
         private:
             typedef	std::map<std::string, Screen *> screen_map;
@@ -32,7 +31,7 @@ namespace SkullEngine
             void	ActiveScreen(const std::string &);
             void	UnactiveScreen(const std::string &);
             void	UnactiveScreen(Screen *);
-            const   Window::Window  &Win() const;
+            Window::Window  &Win() const;
             void    OrderActive();
             void    Break();
             void    Purge();

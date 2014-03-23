@@ -1,5 +1,5 @@
-#include "AGameScreen.hpp"
-#include "Exception.hpp"
+#include "SkullEngine/AGameScreen.hpp"
+#include "SkullEngine/Exception.hpp"
 
 namespace SkullEngine
 {
@@ -30,7 +30,7 @@ namespace SkullEngine
         {
             return *_name;
         }
-        const ScreenManager::ScreenManager &AGameScreen::Manager() const
+        ScreenManager::ScreenManager &AGameScreen::Manager() const
         {
             return _manager;
         }

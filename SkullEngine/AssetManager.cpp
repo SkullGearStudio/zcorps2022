@@ -1,5 +1,5 @@
-#include "AssetManager.hpp"
-#include "Exception.hpp"
+#include "SkullEngine/AssetManager.hpp"
+#include "SkullEngine/Exception.hpp"
 
 namespace SkullEngine
 {

@@ -3,17 +3,17 @@
 #include <string>
 #include <SFML\Graphics.hpp>
 
-#include "SkullEngine.hpp"
-#include "ScreenManager.hpp"
-#include "Types.hpp"
-#include "AssetManager.hpp"
-#include "Scene.hpp"
+
+#include "SkullEngine\ScreenManager.hpp"
+#include "SkullEngine\Types.hpp"
+#include "SkullEngine\AssetManager.hpp"
+#include "SkullEngine\Scene.hpp"
 
 namespace SkullEngine
 {
     namespace Window
     {
-        class SKULLENGINE_API Window
+        class Window
         {
         private:
             typedef std::map<std::string, Scene *> scene_map;
@@ -25,13 +25,13 @@ namespace SkullEngine
 
             // GETTER
             Asset::AssetManager &ASM();
-
+            ScreenManager::ScreenManager    &Window::Manager();
 
             // FCT
             void    AddScene(Scene &);
             void    LoadScene(const std::string &);
             void    LoadScene(Scene &); // TODO
-            const sf::RenderWindow &Render();
+            sf::RenderWindow &Render();
             void    Start();
             void    Exit() const;
             void    Run() const;

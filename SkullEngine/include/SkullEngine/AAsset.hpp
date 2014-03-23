@@ -2,13 +2,11 @@
 
 #include <string>
 
-#include "SkullEngine.hpp"
-
 namespace SkullEngine
 {
     namespace Asset
     {
-        class SKULLENGINE_API AAsset
+        class AAsset
         {
         public:
             AAsset(const std::string &);
@@ -16,7 +14,7 @@ namespace SkullEngine
 
             const std::string &Name();
 
-        private:
+        protected:
             std::string *_name;
         };
     }

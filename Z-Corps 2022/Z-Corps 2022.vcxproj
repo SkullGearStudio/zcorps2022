@@ -41,7 +41,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
     <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
-    <ExtensionsToDeleteOnClean>*.dll</ExtensionsToDeleteOnClean>
     <OutDir>$(Configuration)\</OutDir>
     <TargetName>ZCorps2022</TargetName>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
@@ -50,7 +49,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
     <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
-    <ExtensionsToDeleteOnClean>*.dll</ExtensionsToDeleteOnClean>
     <OutDir>$(Configuration)\</OutDir>
     <TargetName>ZCorps2022</TargetName>
   </PropertyGroup>
@@ -59,13 +57,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\SkullEngine\include;$(SolutionDir)\SkullEngine\SFML-2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <EnablePREfast>false</EnablePREfast>
+      <AdditionalIncludeDirectories>$(SolutionDir)SkullEngine\include;$(SolutionDir)SFML\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)SkullEngine\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SkullEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)SFML\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>del /Q $(SolutionDir)$(Configuration)\*.dll</Command>
@@ -73,7 +71,7 @@
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>copy $(Configuration)\$(TargetName).exe $(SolutionDir)$(Configuration)\
-copy $(SolutionDir)SkullEngine\bin\*.dll $(SolutionDir)$(Configuration)
+copy $(SolutionDir)SFML\dlld\*.dll $(SolutionDir)$(Configuration)\
 XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/i</Command>
       <Message>copying game exec</Message>
     </PostBuildEvent>
@@ -85,15 +83,15 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\SkullEngine\include;$(SolutionDir)\SkullEngine\SFML-2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName />
+      <AdditionalIncludeDirectories>$(SolutionDir)SkullEngine\include;$(SolutionDir)SFML\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(SolutionDir)SkullEngine\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SkullEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)SFML\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>del /Q $(SolutionDir)$(Configuration)\*.dll</Command>
@@ -107,11 +105,34 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\SkullEngine\AAsset.cpp" />
+    <ClCompile Include="..\SkullEngine\AGameScreen.cpp" />
+    <ClCompile Include="..\SkullEngine\AssetManager.cpp" />
+    <ClCompile Include="..\SkullEngine\Core.cpp" />
+    <ClCompile Include="..\SkullEngine\Image.cpp" />
+    <ClCompile Include="..\SkullEngine\Scene.cpp" />
+    <ClCompile Include="..\SkullEngine\ScreenManager.cpp" />
+    <ClCompile Include="..\SkullEngine\Texture.cpp" />
+    <ClCompile Include="..\SkullEngine\Window.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SplashScreen.cpp" />
+    <ClCompile Include="SplashScreenBackground.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SplashScreen.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\AAsset.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\AGameScreen.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\AssetManager.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Assets.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Core.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Exception.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\IGameScreen.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Image.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Scene.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\ScreenManager.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Texture.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Types.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Window.hpp" />
+    <ClInclude Include="Screens.hpp" />
+    <ClInclude Include="SplashScreenBackground.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

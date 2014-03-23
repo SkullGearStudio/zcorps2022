@@ -2,14 +2,13 @@
 
 #include <map>
 
-#include "SkullEngine.hpp"
-#include "AAsset.hpp"
+#include "SkullEngine\AAsset.hpp"
 
 namespace SkullEngine
 {
     namespace Asset
     {
-        class SKULLENGINE_API AssetManager
+        class AssetManager
         {
         private:
             typedef std::map<std::string, AAsset *> asset_map;

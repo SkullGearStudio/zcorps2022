@@ -1,4 +1,4 @@
-#include "Texture.hpp"
+#include "SkullEngine/Texture.hpp"
 
 namespace SkullEngine
 {

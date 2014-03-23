@@ -1,4 +1,4 @@
-#include "Window.hpp"
+#include "SkullEngine/Window.hpp"
 
 namespace SkullEngine
 {
@@ -20,6 +20,14 @@ namespace SkullEngine
         {
             _scenes[s.Name()] = &s;
         }
+        Asset::AssetManager &Window::ASM()
+        {
+            return _assets;
+        }
+        ScreenManager::ScreenManager    &Window::Manager()
+        {
+            return *_scm;
+        }
         void    Window::LoadScene(const std::string &name)
         {
             scene_map::iterator it = _scenes.find(name);
@@ -40,7 +48,7 @@ namespace SkullEngine
             }
             _scm->OrderActive();
         }
-        const sf::RenderWindow  &Window::Render()
+        sf::RenderWindow  &Window::Render()
         {
             return *_render;
         }

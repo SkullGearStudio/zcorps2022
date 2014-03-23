@@ -1,4 +1,4 @@
-#include "Scene.hpp"
+#include "SkullEngine/Scene.hpp"
 
 namespace SkullEngine
 {

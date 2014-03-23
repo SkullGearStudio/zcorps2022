@@ -1,4 +1,4 @@
-#include "Core.hpp"
+#include "SkullEngine/Core.hpp"
 
 namespace SkullEngine
 {

@@ -2,15 +2,14 @@
 
 #include <list>
 
-#include "SkullEngine.hpp"
-#include "Types.hpp"
-#include "AGameScreen.hpp"
+#include "SkullEngine\Types.hpp"
+#include "SkullEngine\AGameScreen.hpp"
 
 namespace SkullEngine
 {
     namespace Window
     {
-        class SKULLENGINE_API Scene
+        class Scene
         {
         private:
             typedef std::list<Screen *> screen_list;

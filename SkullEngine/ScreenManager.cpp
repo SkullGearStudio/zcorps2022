@@ -1,5 +1,5 @@
-#include "ScreenManager.hpp"
-#include "Exception.hpp"
+#include "SkullEngine/ScreenManager.hpp"
+#include "SkullEngine/Exception.hpp"
 
 #include <algorithm>
 
@@ -111,7 +111,7 @@ namespace SkullEngine
             it = _actives->begin();
             (*it)->PopUp();
         }
-        const Window::Window &ScreenManager::Win() const
+        Window::Window &ScreenManager::Win() const
         {
             return _win;
         }

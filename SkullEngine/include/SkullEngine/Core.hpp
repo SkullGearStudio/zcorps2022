@@ -2,13 +2,12 @@
 
 #include <queue>
 
-#include "SkullEngine.hpp"
-#include "AssetManager.hpp"
-#include "Window.hpp"
+#include "SkullEngine\AssetManager.hpp"
+#include "SkullEngine\Window.hpp"
 
 namespace SkullEngine
 {
-    class SKULLENGINE_API Core
+    class Core
     {
     private:
         typedef std::queue<Window::Window *> window_queue;

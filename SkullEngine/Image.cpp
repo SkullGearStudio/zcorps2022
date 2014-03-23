@@ -1,4 +1,4 @@
-#include "Image.hpp"
+#include "SkullEngine/Image.hpp"
 
 namespace SkullEngine
 {

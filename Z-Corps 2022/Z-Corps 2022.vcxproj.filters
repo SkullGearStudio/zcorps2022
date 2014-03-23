@@ -10,16 +10,106 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{4f502dcd-5c39-48a9-9529-c1fa15ed6175}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SkullEngine">
+      <UniqueIdentifier>{f6644dea-36c0-431d-862d-76a0fd549f19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SkullEngine\Asset">
+      <UniqueIdentifier>{3d68b99f-1210-476b-b8ae-78ae8c04aa3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SkullEngine\GameScreen">
+      <UniqueIdentifier>{6264e16a-4d9f-4a1c-9261-9b87278fa8d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SkullEngine\Asset\Types">
+      <UniqueIdentifier>{9da49aa7-c8e9-4610-b951-05a9497a861e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SkullEngine\Window">
+      <UniqueIdentifier>{5aede116-dcc1-4670-a456-f6e9a98a15e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SkullEngine\ScreenManager">
+      <UniqueIdentifier>{a30f31c3-84bb-4102-80bd-4f9e150fc256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SkullEngine\Core">
+      <UniqueIdentifier>{05472464-de72-412e-937c-bfd9361733f8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SplashScreen.cpp">
+    <ClCompile Include="SplashScreenBackground.cpp">
       <Filter>Screens\Splash Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\AAsset.cpp">
+      <Filter>SkullEngine\Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\AGameScreen.cpp">
+      <Filter>SkullEngine\GameScreen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\AssetManager.cpp">
+      <Filter>SkullEngine\Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\Image.cpp">
+      <Filter>SkullEngine\Asset\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\Scene.cpp">
+      <Filter>SkullEngine\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\ScreenManager.cpp">
+      <Filter>SkullEngine\ScreenManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\Texture.cpp">
+      <Filter>SkullEngine\Asset\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\Window.cpp">
+      <Filter>SkullEngine\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\Core.cpp">
+      <Filter>SkullEngine\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SplashScreen.hpp">
+    <ClInclude Include="Screens.hpp">
+      <Filter>Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashScreenBackground.hpp">
       <Filter>Screens\Splash Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Exception.hpp">
+      <Filter>SkullEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Types.hpp">
+      <Filter>SkullEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\AAsset.hpp">
+      <Filter>SkullEngine\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\AGameScreen.hpp">
+      <Filter>SkullEngine\GameScreen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\AssetManager.hpp">
+      <Filter>SkullEngine\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Assets.hpp">
+      <Filter>SkullEngine\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\IGameScreen.hpp">
+      <Filter>SkullEngine\GameScreen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Image.hpp">
+      <Filter>SkullEngine\Asset\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Scene.hpp">
+      <Filter>SkullEngine\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\ScreenManager.hpp">
+      <Filter>SkullEngine\ScreenManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Texture.hpp">
+      <Filter>SkullEngine\Asset\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Window.hpp">
+      <Filter>SkullEngine\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Core.hpp">
+      <Filter>SkullEngine\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
