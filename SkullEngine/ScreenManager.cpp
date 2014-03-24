@@ -1,5 +1,6 @@
-#include "SkullEngine/ScreenManager.hpp"
-#include "SkullEngine/Exception.hpp"
+#include "SkullEngine\ScreenManager.hpp"
+#include "SkullEngine\Exception.hpp"
+#include "SkullEngine\Window.hpp"
 
 #include <algorithm>
 
@@ -132,6 +133,7 @@ namespace SkullEngine
         {
             screen_list::iterator it = _actives->begin();
 
+            _win.Render().clear(sf::Color::Black);
             break_r = false;
             while (it != _actives->end())
             {
@@ -145,6 +147,7 @@ namespace SkullEngine
                 (*it)->Draw();
                 ++it;
             }
+            _win.Render().display();
         }
     }
 }

@@ -16,4 +16,5 @@ void    SplashScreenBackground::Init()
 
 void    SplashScreenBackground::Draw()
 {
+    _win.Render().draw(_background->res());
 }

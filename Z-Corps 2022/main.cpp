@@ -8,8 +8,10 @@ int     main()
     SkullEngine::Core GameCore;
     SkullEngine::Asset::AssetManager &AssetManager = GameCore.Assets();
 
-    AssetManager.LoadAsset(SkullEngine::Asset::Texture("splash_background_texture", "Assets/img/splash.jpg"));
-    AssetManager.LoadAsset(SkullEngine::Asset::Image("splash_background_image", dynamic_cast<SkullEngine::Asset::Texture &>(AssetManager.GetAsset("splash_background_texture"))));
+    SkullEngine::Asset::Texture splash_background_texture("splash_background_texture", "Assets/img/splash.jpg");
+    AssetManager.LoadAsset(splash_background_texture);
+    SkullEngine::Asset::Image splash_background_image("splash_background_image", dynamic_cast<SkullEngine::Asset::Texture &>(AssetManager.GetAsset("splash_background_texture")));
+    AssetManager.LoadAsset(splash_background_image);
     
     SkullEngine::Window::Window splash_window(SkullEngine::WindowType::SPLASHSCREEN, 1004, 357, "Splash screen", AssetManager);
     SkullEngine::Window::Scene splash_scene("Splash Screen");
