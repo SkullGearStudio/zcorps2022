@@ -18,7 +18,7 @@ void    initSplashScreen(SkullEngine::Core &core, SkullEngine::Asset::AssetManag
     SkullEngine::Window::Window *splash_window = new SkullEngine::Window::Window(SkullEngine::WindowType::SPLASHSCREEN, 1004, 357, "Splash screen", assets);
 
     SkullEngine::Window::Scene  *splash_scene = new SkullEngine::Window::Scene("Splash Screen");
-    SplashScreenBackground  *splash_screen = new SplashScreenBackground(splash_window->Manager(), assets, *splash_window);
+    SplashScreenBackground  *splash_screen = new SplashScreenBackground(splash_window->Manager(), assets, *splash_window, core);
 
     splash_scene->AddScreen(*splash_screen);
 

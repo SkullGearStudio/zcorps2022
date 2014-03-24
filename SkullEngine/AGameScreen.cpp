@@ -8,14 +8,15 @@ namespace SkullEngine
 {
     namespace GameScreen
     {
-        AGameScreen::AGameScreen(ScreenManager::ScreenManager &sm, Asset::AssetManager &am, Window::Window &w, const std::string &n) :
+        AGameScreen::AGameScreen(ScreenManager::ScreenManager &sm, Asset::AssetManager &am, Window::Window &w, Core &c, const std::string &n) :
             _active(false),
             _popup(false),
             _layer(100),
             _name(new std::string(n)),
             _manager(sm),
             _assets(am),
-            _win(w)
+            _win(w),
+            _core(c)
         {
         }
 

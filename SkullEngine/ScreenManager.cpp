@@ -112,10 +112,6 @@ namespace SkullEngine
             it = _actives->begin();
             (*it)->PopUp();
         }
-        Window::Window &ScreenManager::Win() const
-        {
-            return _win;
-        }
         void    ScreenManager::OrderActive()
         {
             _actives->sort(LayerComp);

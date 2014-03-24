@@ -6,8 +6,11 @@
 
 
 
-SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &scm, SkullEngine::Asset::AssetManager &am, SkullEngine::Window::Window &w) :
-    AGameScreen(scm, am, w, "Splash Screen")
+SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &scm,
+                                               SkullEngine::Asset::AssetManager &am,
+                                               SkullEngine::Window::Window &w,
+                                               SkullEngine::Core &c) :
+    AGameScreen(scm, am, w, c, "Splash Screen")
 {
 }
 

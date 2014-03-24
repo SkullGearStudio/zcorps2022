@@ -2,6 +2,7 @@
 
 namespace SkullEngine
 {
+    class Core;
     namespace GameScreen
     {
         class AGameScreen;

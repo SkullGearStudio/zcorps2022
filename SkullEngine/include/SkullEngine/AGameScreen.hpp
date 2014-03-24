@@ -12,7 +12,7 @@ namespace SkullEngine
         class AGameScreen : public IGameScreen
         {
         public:
-            AGameScreen(ScreenManager::ScreenManager &, Asset::AssetManager &, Window::Window &, const std::string &);
+            AGameScreen(ScreenManager::ScreenManager &, Asset::AssetManager &, Window::Window &, Core &, const std::string &);
             virtual ~AGameScreen(void) {};
 
             virtual void Init() = 0;
@@ -41,6 +41,8 @@ namespace SkullEngine
             ScreenManager::ScreenManager &_manager;
             Asset::AssetManager &_assets;
             Window::Window &_win;
+            Core    &_core;
+
         };
     }
 }
