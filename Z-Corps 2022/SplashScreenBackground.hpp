@@ -11,7 +11,7 @@ public:
 
     void    Init();
     void    Update() {};
-    void    Event() {};
+    void    Event();
     void    Draw();
     void    Destroy() {};
 

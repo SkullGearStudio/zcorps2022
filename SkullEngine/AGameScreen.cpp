@@ -1,5 +1,8 @@
+#include <SFML\Window\Event.hpp>
+
 #include "SkullEngine\AGameScreen.hpp"
 #include "SkullEngine\Exception.hpp"
+#include "SkullEngine\Window.hpp"
 
 namespace SkullEngine
 {
@@ -14,6 +17,12 @@ namespace SkullEngine
             _assets(am),
             _win(w)
         {
+        }
+
+        void AGameScreen::Event()
+        {
+            sf::Event   event;
+            while (_win.Render().pollEvent(event));
         }
 
         bool AGameScreen::IsActive() const
