@@ -10,6 +10,7 @@ namespace SkullEngine
         class SimpleSprite : public AAsset
         {
         public:
+            SimpleSprite(const std::string &, AAsset &);
             SimpleSprite(const std::string &, Texture &);
             ~SimpleSprite() {}
 

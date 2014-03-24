@@ -13,6 +13,7 @@ namespace SkullEngine
         class Text : public AAsset
         {
         public:
+            Text(const std::string &, const std::string &, uint, sf::Color, AAsset &);
             Text(const std::string &, const std::string &, uint, sf::Color, Font &);
             ~Text() {};
 

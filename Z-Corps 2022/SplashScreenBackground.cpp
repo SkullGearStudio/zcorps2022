@@ -1,6 +1,8 @@
+#include <SkullEngine\ScreenManager.hpp>
+#include <SkullEngine\Window.hpp>
+
 #include "SplashScreenBackground.hpp"
-#include "SkullEngine\ScreenManager.hpp"
-#include "SkullEngine\Window.hpp"
+
 
 
 SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &scm, SkullEngine::Asset::AssetManager &am, SkullEngine::Window::Window &w) :
@@ -11,7 +13,7 @@ SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::Scree
 void    SplashScreenBackground::Init()
 {
     On();
-    _background = &dynamic_cast<SkullEngine::Asset::SimpleSprite &>(_assets.GetAsset("splash_background_image"));
+    _background = &dynamic_cast<SkullEngine::Asset::SimpleSprite &>(_assets.GetAsset("splash_background"));
 }
 
 void    SplashScreenBackground::Draw()

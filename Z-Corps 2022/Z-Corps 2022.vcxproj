@@ -119,6 +119,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClCompile Include="..\SkullEngine\Text.cpp" />
     <ClCompile Include="..\SkullEngine\Texture.cpp" />
     <ClCompile Include="..\SkullEngine\Window.cpp" />
+    <ClCompile Include="initSplashScreen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SplashScreenBackground.cpp" />
   </ItemGroup>

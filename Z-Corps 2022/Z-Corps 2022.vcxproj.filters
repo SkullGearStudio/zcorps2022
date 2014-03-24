@@ -82,6 +82,9 @@
     <ClCompile Include="..\SkullEngine\Text.cpp">
       <Filter>SkullEngine\Asset\Types</Filter>
     </ClCompile>
+    <ClCompile Include="initSplashScreen.cpp">
+      <Filter>Game\Screens</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screens.hpp">

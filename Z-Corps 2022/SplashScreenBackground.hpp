@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Skullengine\AGameScreen.hpp"
-#include "SkullEngine\Assets.hpp"
+#include <Skullengine\AGameScreen.hpp>
+#include <SkullEngine\Assets.hpp>
 
 class SplashScreenBackground : public SkullEngine::GameScreen::AGameScreen
 {
