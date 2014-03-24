@@ -111,10 +111,12 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClCompile Include="..\SkullEngine\AGameScreen.cpp" />
     <ClCompile Include="..\SkullEngine\AssetManager.cpp" />
     <ClCompile Include="..\SkullEngine\Core.cpp" />
+    <ClCompile Include="..\SkullEngine\Font.cpp" />
     <ClCompile Include="..\SkullEngine\Image.cpp" />
     <ClCompile Include="..\SkullEngine\SimpleSprite.cpp" />
     <ClCompile Include="..\SkullEngine\Scene.cpp" />
     <ClCompile Include="..\SkullEngine\ScreenManager.cpp" />
+    <ClCompile Include="..\SkullEngine\Text.cpp" />
     <ClCompile Include="..\SkullEngine\Texture.cpp" />
     <ClCompile Include="..\SkullEngine\Window.cpp" />
     <ClCompile Include="main.cpp" />
@@ -127,11 +129,13 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Assets.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Core.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Exception.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Font.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\IGameScreen.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Image.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\SimpleSprite.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Scene.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\ScreenManager.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Text.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Texture.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Types.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Window.hpp" />

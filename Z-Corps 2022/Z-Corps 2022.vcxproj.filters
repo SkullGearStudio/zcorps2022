@@ -37,6 +37,9 @@
     <Filter Include="Game\Screens\Splash Screen">
       <UniqueIdentifier>{db98c33f-a28d-48a5-b0e1-3a6956c8b5c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SkullEngine\GUI">
+      <UniqueIdentifier>{557d1515-a8fb-48d5-9fe7-2bf4bd3b5558}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -71,6 +74,12 @@
       <Filter>SkullEngine\Asset\Types</Filter>
     </ClCompile>
     <ClCompile Include="..\SkullEngine\Image.cpp">
+      <Filter>SkullEngine\Asset\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\Font.cpp">
+      <Filter>SkullEngine\Asset\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SkullEngine\Text.cpp">
       <Filter>SkullEngine\Asset\Types</Filter>
     </ClCompile>
   </ItemGroup>
@@ -124,6 +133,12 @@
       <Filter>Res</Filter>
     </ClInclude>
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Image.hpp">
+      <Filter>SkullEngine\Asset\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Font.hpp">
+      <Filter>SkullEngine\Asset\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\Text.hpp">
       <Filter>SkullEngine\Asset\Types</Filter>
     </ClInclude>
   </ItemGroup>

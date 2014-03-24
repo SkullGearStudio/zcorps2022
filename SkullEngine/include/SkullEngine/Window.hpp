@@ -38,7 +38,6 @@ namespace SkullEngine
             void    Exit() const;
             void    Run();
 
-
         private:
             WindowType  _type;
             uint    _width;
