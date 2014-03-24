@@ -11,7 +11,7 @@ SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::Scree
 void    SplashScreenBackground::Init()
 {
     On();
-    _background = &dynamic_cast<SkullEngine::Asset::Image &>(_assets.GetAsset("splash_background_image"));
+    _background = &dynamic_cast<SkullEngine::Asset::SimpleSprite &>(_assets.GetAsset("splash_background_image"));
 }
 
 void    SplashScreenBackground::Draw()

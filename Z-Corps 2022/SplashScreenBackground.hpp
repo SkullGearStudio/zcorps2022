@@ -16,6 +16,6 @@ public:
     void    Destroy() {};
 
 private:
-    SkullEngine::Asset::Image   *_background;
+    SkullEngine::Asset::SimpleSprite   *_background;
 };
 

@@ -1,18 +1,26 @@
-#include "SkullEngine/Image.hpp"
+#include "SkullEngine\Image.hpp"
 
 namespace SkullEngine
 {
     namespace Asset
     {
-        Image::Image(const std::string &name, Texture &texture) :
+        Image::Image(const std::string &name, const std::string &file) :
             AAsset(name)
         {
-            _spr.setTexture(texture.res());
+            if (!_img.loadFromFile(file))
+            {
+                system("PAUSE");
+                exit(-1);
+            }
         }
-        sf::Sprite &Image::res()
+
+        sf::Image &Image::res()
         {
-            return _spr;
+            return _img;
+        }
+        const sf::Uint8 *Image::px()
+        {
+            return _img.getPixelsPtr();
         }
     }
 }
-

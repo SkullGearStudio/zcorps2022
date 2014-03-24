@@ -66,7 +66,8 @@
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>del /Q $(SolutionDir)$(Configuration)\*.dll</Command>
+      <Command>rd /s/q $(SolutionDir)$(Configuration)\Assets
+del /Q $(SolutionDir)$(Configuration)\*.*</Command>
       <Message>Cleaning folder</Message>
     </PreBuildEvent>
     <PostBuildEvent>
@@ -94,7 +95,8 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>del /Q $(SolutionDir)$(Configuration)\*.dll</Command>
+      <Command>rd /s/q $(SolutionDir)$(Configuration)\Assets
+del /Q $(SolutionDir)$(Configuration)\*.*</Command>
       <Message>Cleaning folder</Message>
     </PreBuildEvent>
     <PostBuildEvent>
@@ -110,6 +112,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClCompile Include="..\SkullEngine\AssetManager.cpp" />
     <ClCompile Include="..\SkullEngine\Core.cpp" />
     <ClCompile Include="..\SkullEngine\Image.cpp" />
+    <ClCompile Include="..\SkullEngine\SimpleSprite.cpp" />
     <ClCompile Include="..\SkullEngine\Scene.cpp" />
     <ClCompile Include="..\SkullEngine\ScreenManager.cpp" />
     <ClCompile Include="..\SkullEngine\Texture.cpp" />
@@ -126,13 +129,21 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Exception.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\IGameScreen.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Image.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\SimpleSprite.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Scene.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\ScreenManager.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Texture.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Types.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Window.hpp" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Screens.hpp" />
     <ClInclude Include="SplashScreenBackground.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Z-Corps 2022.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\img\favicon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

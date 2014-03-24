@@ -1,4 +1,5 @@
 #pragma once
 
-#include "Texture.hpp"
-#include "Image.hpp"
+#include "SkullEngine\Texture.hpp"
+#include "SkullEngine\SimpleSprite.hpp"
+#include "SkullEngine\Image.hpp"

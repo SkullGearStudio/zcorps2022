@@ -1,7 +1,7 @@
 #pragma once
 
 #include "SkullEngine\AAsset.hpp"
-#include "SkullEngine\Texture.hpp"
+#include "SFML\Graphics.hpp"
 
 namespace SkullEngine
 {
@@ -10,13 +10,14 @@ namespace SkullEngine
         class Image : public AAsset
         {
         public:
-            Image(const std::string &, Texture &);
-            ~Image() {}
+            Image(const std::string &, const std::string &);
+            ~Image(void) {};
 
-            sf::Sprite  &res();
+            sf::Image &res();
+            const sf::Uint8 *px();
 
         private:
-            sf::Sprite _spr;
+            sf::Image _img;
         };
     }
 }
