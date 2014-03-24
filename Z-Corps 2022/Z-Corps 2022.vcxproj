@@ -99,7 +99,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>copy $(Configuration)\$(TargetName).exe $(SolutionDir)$(Configuration)\
-copy $(SolutionDir)SkullEngine\bin\*.dll $(SolutionDir)$(Configuration)
+copy $(SolutionDir)SFML\dll\*.dll $(SolutionDir)$(Configuration)\
 XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/i</Command>
       <Message>copying game exec</Message>
     </PostBuildEvent>
