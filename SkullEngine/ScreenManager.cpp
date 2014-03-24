@@ -129,11 +129,16 @@ namespace SkullEngine
             while (!_screens->empty())
                 RemoveScreen(_screens->begin()->second->Name());
         }
-        void    ScreenManager::Run()
+        void    ScreenManager::Run(sf::Clock &clock)
         {
+            bool    display = false;
             screen_list::iterator it = _actives->begin();
-
-            _win.Render().clear(sf::Color::Black);
+            
+            if (clock.getElapsedTime().asMilliseconds() >= ((1 / 60) * 1000))
+            {
+                display = true;
+                _win.Render().clear(sf::Color::Black);
+            }
             break_r = false;
             while (it != _actives->end())
             {
@@ -144,10 +149,15 @@ namespace SkullEngine
                 (*it)->Update();
                 if (break_r)
                     break;
-                (*it)->Draw();
+                if (display)
+                    (*it)->Draw();
                 ++it;
             }
-            _win.Render().display();
+            if (display)
+            {
+                _win.Render().display();
+                clock.restart();
+            }
         }
     }
 }

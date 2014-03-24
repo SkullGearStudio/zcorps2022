@@ -62,15 +62,16 @@ namespace SkullEngine
                 _render = new sf::RenderWindow(sf::VideoMode(_width, _height), "", sf::Style::None);
             else
                 _render = new sf::RenderWindow(sf::VideoMode(_width, _height), *_name, sf::Style::Close | sf::Style::Titlebar);
+            _clock.restart();
             LoadScene(*_current);
         }
         void    Window::Exit() const
         {
             _render->close();
         }
-        void    Window::Run() const
+        void    Window::Run()
         {
-            _scm->Run();
+            _scm->Run(_clock);
         }
     }
 }

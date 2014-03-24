@@ -2,6 +2,7 @@
 
 #include <string>
 #include <SFML\Graphics.hpp>
+#include <SFML\System\Clock.hpp>
 
 
 #include "SkullEngine\ScreenManager.hpp"
@@ -35,7 +36,7 @@ namespace SkullEngine
             sf::RenderWindow &Render();
             void    Start();
             void    Exit() const;
-            void    Run() const;
+            void    Run();
 
 
         private:
@@ -49,6 +50,7 @@ namespace SkullEngine
             scene_map   _scenes;
             ScreenManager::ScreenManager *_scm;
             sf::RenderWindow *_render;
+            sf::Clock _clock;
         };
     }
 }

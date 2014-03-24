@@ -5,6 +5,7 @@
 
 #include "AGameScreen.hpp"
 #include "Types.hpp"
+#include "SFML\System\Clock.hpp"
 
 namespace SkullEngine
 {
@@ -35,7 +36,7 @@ namespace SkullEngine
             void    OrderActive();
             void    Break();
             void    Purge();
-            void	Run();
+            void	Run(sf::Clock &);
 
         private:
             screen_map *_screens;
