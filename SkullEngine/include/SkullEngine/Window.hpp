@@ -25,8 +25,8 @@ namespace SkullEngine
             ~Window() {};
 
             // GETTER
-            Asset::AssetManager &ASM();
-            ScreenManager::ScreenManager    &Window::Manager();
+            ScreenManager::ScreenManager    &Manager();
+            const std::string   &Name();
 
             // FCT
             void    FirstScene(Scene &);
@@ -35,7 +35,7 @@ namespace SkullEngine
             void    LoadScene(Scene &); // TODO
             sf::RenderWindow &Render();
             void    Start();
-            void    Exit() const;
+            void    Exit();
             void    Run();
 
         private:
@@ -47,7 +47,7 @@ namespace SkullEngine
             bool    _exit;
             Scene *_current;
             scene_map   _scenes;
-            ScreenManager::ScreenManager *_scm;
+            ScreenManager::ScreenManager _scm;
             sf::RenderWindow *_render;
             sf::Clock _clock;
         };

@@ -11,8 +11,18 @@ namespace SkullEngine
             _name(new std::string(n)),
             _assets(a),
             _exit(false),
-            _scm(new ScreenManager::ScreenManager(*this))
+            _current(NULL),
+            _scm(ScreenManager::ScreenManager(*this))
         {
+        }
+
+        ScreenManager::ScreenManager    &Window::Manager()
+        {
+            return _scm;
+        }
+        const std::string &Window::Name()
+        {
+            return *_name;
         }
 
         void    Window::FirstScene(Scene &s)
@@ -23,14 +33,6 @@ namespace SkullEngine
         void    Window::AddScene(Scene &s)
         {
             _scenes[s.Name()] = &s;
-        }
-        Asset::AssetManager &Window::ASM()
-        {
-            return _assets;
-        }
-        ScreenManager::ScreenManager    &Window::Manager()
-        {
-            return *_scm;
         }
         void    Window::LoadScene(const std::string &name)
         {
@@ -43,14 +45,14 @@ namespace SkullEngine
         {
             screen_list::iterator it = s.Screens().begin();
 
-            _scm->Purge();
+            _scm.Purge();
             while (it != s.Screens().end())
             {
                 Screen &current = *(*it);
-                _scm->LoadFromScene(current);
+                _scm.LoadFromScene(current);
                 ++it;
             }
-            _scm->OrderActive();
+            _scm.OrderActive();
         }
         sf::RenderWindow  &Window::Render()
         {
@@ -65,13 +67,13 @@ namespace SkullEngine
             _clock.restart();
             LoadScene(*_current);
         }
-        void    Window::Exit() const
+        void    Window::Exit()
         {
             _render->close();
         }
         void    Window::Run()
         {
-            _scm->Run(_clock);
+            _scm.Run(_clock);
         }
     }
 }
