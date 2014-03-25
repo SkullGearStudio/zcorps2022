@@ -40,6 +40,12 @@
     <Filter Include="SkullEngine\GUI">
       <UniqueIdentifier>{557d1515-a8fb-48d5-9fe7-2bf4bd3b5558}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Screens\Game Win">
+      <UniqueIdentifier>{109ecb4a-71df-4c0d-91c6-2f39af79c8ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Screens\Game Win\Main Menu">
+      <UniqueIdentifier>{188bce2a-6c70-4780-81be-304fdb33494d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -86,6 +92,12 @@
       <Filter>Game\Screens</Filter>
     </ClCompile>
     <ClCompile Include="SplashScreenLoader.cpp">
+      <Filter>Game\Screens\Splash Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuBackground.cpp">
+      <Filter>Game\Screens\Game Win\Main Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Loaders.cpp">
       <Filter>Game\Screens\Splash Screen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -149,6 +161,9 @@
     </ClInclude>
     <ClInclude Include="SplashScreenLoader.hpp">
       <Filter>Game\Screens\Splash Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuBackground.hpp">
+      <Filter>Game\Screens\Game Win\Main Menu</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

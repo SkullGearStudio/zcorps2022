@@ -7,7 +7,7 @@
 
 
 SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &scm, SkullEngine::Asset::AssetManager &am, SkullEngine::Window::Window &w, SkullEngine::Core &c) :
-    AGameScreen(scm, am, w, c, "Splash Screen")
+    AGameScreen(scm, am, w, c, "splash_screen_background")
 {
 }
 

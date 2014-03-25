@@ -23,7 +23,14 @@ namespace SkullEngine
         void AGameScreen::Event()
         {
             sf::Event   event;
-            while (_win.Render().pollEvent(event));
+            while (_win.Render().pollEvent(event))
+            {
+                if (event.type == sf::Event::Closed)
+                {
+                    _win.Exit();
+                    _manager.Break();
+                }
+            }
         }
 
         bool AGameScreen::IsActive() const

@@ -64,10 +64,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)SFML\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
     <PreBuildEvent>
       <Command>rd /s/q $(SolutionDir)$(Configuration)\Assets
-del /Q $(SolutionDir)$(Configuration)\*.*</Command>
+del /Q $(SolutionDir)$(Configuration)\*.dll
+del /Q $(SolutionDir)$(Configuration)\$(TargetName).exe</Command>
       <Message>Cleaning folder</Message>
     </PreBuildEvent>
     <PostBuildEvent>
@@ -96,7 +98,8 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     </Link>
     <PreBuildEvent>
       <Command>rd /s/q $(SolutionDir)$(Configuration)\Assets
-del /Q $(SolutionDir)$(Configuration)\*.*</Command>
+del /Q $(SolutionDir)$(Configuration)\*.dll
+del /Q $(SolutionDir)$(Configuration)\$(TargetName).exe</Command>
       <Message>Cleaning folder</Message>
     </PreBuildEvent>
     <PostBuildEvent>
@@ -120,7 +123,9 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClCompile Include="..\SkullEngine\Texture.cpp" />
     <ClCompile Include="..\SkullEngine\Window.cpp" />
     <ClCompile Include="initSplashScreen.cpp" />
+    <ClCompile Include="Loaders.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenuBackground.cpp" />
     <ClCompile Include="SplashScreenBackground.cpp" />
     <ClCompile Include="SplashScreenLoader.cpp" />
   </ItemGroup>
@@ -141,6 +146,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Texture.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Types.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Window.hpp" />
+    <ClInclude Include="MainMenuBackground.hpp" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Screens.hpp" />
     <ClInclude Include="SplashScreenBackground.hpp" />

@@ -1,4 +1,5 @@
-#include "SkullEngine/Window.hpp"
+#include "SkullEngine\Window.hpp"
+#include "SkullEngine\Exception.hpp"
 
 namespace SkullEngine
 {
@@ -24,6 +25,22 @@ namespace SkullEngine
         {
             return *_name;
         }
+        Scene   &Window::getScene(const std::string &name)
+        {
+            scene_map::iterator it = _scenes.find(name);
+
+            try
+            {
+                if (it == _scenes.end())
+                    throw Exception("Scene [" + name + "] doesn't exist.");
+                else
+                    return *(it->second);
+            } catch (Exception ex)
+            {
+                ex.box();
+                exit(-1);
+            }
+        }
 
         void    Window::FirstScene(Scene &s)
         {
@@ -36,10 +53,7 @@ namespace SkullEngine
         }
         void    Window::LoadScene(const std::string &name)
         {
-            scene_map::iterator it = _scenes.find(name);
-
-            if (it != _scenes.end())
-                LoadScene(*(it->second));
+            LoadScene(getScene(name));
         }
         void    Window::LoadScene(Scene &s)
         {

@@ -15,7 +15,6 @@ int     main()
     
     initSplashScreen(GameCore, AssetManager);
     GameCore.Run();
-    
-    system("PAUSE");
+
     return 0;
 }

@@ -27,6 +27,7 @@ namespace SkullEngine
             // GETTER
             ScreenManager::ScreenManager    &Manager();
             const std::string   &Name();
+            Scene   &getScene(const std::string &);
 
             // FCT
             void    FirstScene(Scene &);

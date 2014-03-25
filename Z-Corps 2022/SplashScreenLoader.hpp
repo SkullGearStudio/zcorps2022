@@ -15,8 +15,10 @@ public:
     void Draw();
     void Destroy() {};
 
+    void    ImgLoad();
     void    WindowLoad();
-    void    SceneLoad();
+    void    ScenesLoad();
+    void    ScreensLoad();
 
     typedef void (SplashScreenLoader::*fct_ptr)();
     struct oppTab

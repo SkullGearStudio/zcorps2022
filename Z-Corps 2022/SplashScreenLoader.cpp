@@ -1,21 +1,20 @@
 #include <iostream>
-#include <SFML\Graphics.hpp>
-#include <SFML\System\Vector2.hpp>
+#include <Windows.h>
 #include <SkullEngine\Window.hpp>
-#include <SkullEngine\ScreenManager.hpp>
-#include <SkullEngine\Core.hpp>
 
 #include "SplashScreenLoader.hpp"
 
 SplashScreenLoader::oppTab  _load_tab[] =
 {
+    { false, &SplashScreenLoader::ImgLoad },
     { false, &SplashScreenLoader::WindowLoad },
-    { false, &SplashScreenLoader::SceneLoad },
+    { false, &SplashScreenLoader::ScenesLoad },
+    { false, &SplashScreenLoader::ScreensLoad },
     { false, NULL}
 };
 
 SplashScreenLoader::SplashScreenLoader(SkullEngine::ScreenManager::ScreenManager &scm, SkullEngine::Asset::AssetManager &am, SkullEngine::Window::Window &w, SkullEngine::Core &c) :
-    AGameScreen(scm, am, w, c, "Splash Screen Loader"),
+    AGameScreen(scm, am, w, c, "splash_screen_loader"),
     _loader(NULL)
 {
 }
@@ -28,17 +27,18 @@ void    SplashScreenLoader::Init()
 
 void    SplashScreenLoader::Update()
 {
-    int i = 0;
+    int i;
     fct_ptr ptr;
 
     if (_mutexL.try_lock())
     {
+        i = 0;
         while (_load_tab[i]._fct != NULL && _load_tab[i]._trigger == true)
             ++i;
         if (_load_tab[i]._fct == NULL)
         {
+            Sleep(1500);
             std::cout << "Load complete !" << std::endl;
-            system("PAUSE");
             _mutexL.unlock();
             _win.Exit();
             _manager.Break();
@@ -61,23 +61,6 @@ void    SplashScreenLoader::Draw()
     {
         _mutexD.unlock();
     }
-}
-
-void    SplashScreenLoader::WindowLoad()
-{
-    _mutexL.lock();
-    SkullEngine::Window::Window *gameWin = new SkullEngine::Window::Window(SkullEngine::WindowType::DEFAULT, 1600, 900, "Z-Corps 2022", _assets);
-    std::cout << "Game window created" << std::endl;
-    _core.AddWindow(*gameWin);
-    _mutexL.unlock();
-}
-
-void    SplashScreenLoader::SceneLoad()
-{
-    _mutexL.lock();
-    SkullEngine::Window::Window &gameWin = _core.getWin("Z-Corps 2022");
-    std::cout << "Game scene created" << std::endl;
-    _mutexL.unlock();
 }
 
 sf::Thread  *SplashScreenLoader::NewThread(sf::Thread *loader, fct_ptr ptr)
