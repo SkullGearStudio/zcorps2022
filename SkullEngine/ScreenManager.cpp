@@ -10,7 +10,7 @@ namespace SkullEngine
     {
         struct LayerComparator
         {
-            bool operator() (Screen *s1, Screen *s2) { return (true); }
+            bool operator() (Screen *s1, Screen *s2) { return (s1->Layer() < s2->Layer()); }
         } LayerComp;
 
         ScreenManager::ScreenManager(Window::Window &w) :

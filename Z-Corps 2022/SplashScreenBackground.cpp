@@ -6,10 +6,7 @@
 
 
 
-SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &scm,
-                                               SkullEngine::Asset::AssetManager &am,
-                                               SkullEngine::Window::Window &w,
-                                               SkullEngine::Core &c) :
+SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &scm, SkullEngine::Asset::AssetManager &am, SkullEngine::Window::Window &w, SkullEngine::Core &c) :
     AGameScreen(scm, am, w, c, "Splash Screen")
 {
 }
@@ -17,7 +14,7 @@ SplashScreenBackground::SplashScreenBackground(SkullEngine::ScreenManager::Scree
 void    SplashScreenBackground::Init()
 {
     On();
-    PopUp();
+    LayerDown();
     _background = &dynamic_cast<SkullEngine::Asset::SimpleSprite &>(_assets.GetAsset("splash_background"));
 }
 
@@ -38,5 +35,6 @@ void SplashScreenBackground::Event()
 
 void    SplashScreenBackground::Draw()
 {
+    std::cout << "Draw background" << std::endl;
     _win.Render().draw(_background->res());
 }
