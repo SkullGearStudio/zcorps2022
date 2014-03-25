@@ -7,22 +7,17 @@
 
 #include "SplashScreenLoader.hpp"
 
+SplashScreenLoader::oppTab  _load_tab[] =
+{
+    { false, &SplashScreenLoader::WindowLoad },
+    { false, &SplashScreenLoader::SceneLoad },
+    { false, NULL}
+};
+
 SplashScreenLoader::SplashScreenLoader(SkullEngine::ScreenManager::ScreenManager &scm, SkullEngine::Asset::AssetManager &am, SkullEngine::Window::Window &w, SkullEngine::Core &c) :
     AGameScreen(scm, am, w, c, "Splash Screen Loader"),
-    _loader(NULL),
-    _winLoad(false),
-    _screenLoad(false),
-    _stringLoad(false),
-    _imgLoad(false),
-    _fontLoad(false),
-    _objectLoad(false),
-    _soundLoad(false)
+    _loader(NULL)
 {
-    _load_tab = new oppTab[2];
-    _load_tab[0]._trigger = &_winLoad;
-    _load_tab[0]._fct = &SplashScreenLoader::WindowLoad;
-    _load_tab[1]._trigger = NULL;
-    _load_tab[1]._fct = NULL;
 }
 
 void    SplashScreenLoader::Init()
@@ -38,9 +33,9 @@ void    SplashScreenLoader::Update()
 
     if (_mutexL.try_lock())
     {
-        while (_load_tab[i]._trigger && *(_load_tab[i]._trigger))
+        while (_load_tab[i]._fct != NULL && _load_tab[i]._trigger == true)
             ++i;
-        if (_load_tab[i]._trigger == NULL)
+        if (_load_tab[i]._fct == NULL)
         {
             std::cout << "Load complete !" << std::endl;
             system("PAUSE");
@@ -51,8 +46,9 @@ void    SplashScreenLoader::Update()
         }
         else
         {
-            ptr = _load_tab[i]._fct;
             _mutexL.unlock();
+            _load_tab[i]._trigger = true;
+            ptr = _load_tab[i]._fct;
             _loader = NewThread(_loader, ptr);
             return ;
         }
@@ -61,23 +57,27 @@ void    SplashScreenLoader::Update()
 
 void    SplashScreenLoader::Draw()
 {
-    std::cout << "Draw loader" << std::endl;
-    sf::RectangleShape rect(sf::Vector2f(10, 10));
-    rect.setFillColor(sf::Color::Green);
-
     if (_mutexD.try_lock())
     {
-        _win.Render().draw(rect);
         _mutexD.unlock();
     }
 }
 
 void    SplashScreenLoader::WindowLoad()
 {
+    _mutexL.lock();
     SkullEngine::Window::Window *gameWin = new SkullEngine::Window::Window(SkullEngine::WindowType::DEFAULT, 1600, 900, "Z-Corps 2022", _assets);
     std::cout << "Game window created" << std::endl;
     _core.AddWindow(*gameWin);
-    _winLoad = true;
+    _mutexL.unlock();
+}
+
+void    SplashScreenLoader::SceneLoad()
+{
+    _mutexL.lock();
+    SkullEngine::Window::Window &gameWin = _core.getWin("Z-Corps 2022");
+    std::cout << "Game scene created" << std::endl;
+    _mutexL.unlock();
 }
 
 sf::Thread  *SplashScreenLoader::NewThread(sf::Thread *loader, fct_ptr ptr)

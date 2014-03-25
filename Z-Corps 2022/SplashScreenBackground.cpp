@@ -20,6 +20,5 @@ void    SplashScreenBackground::Init()
 
 void    SplashScreenBackground::Draw()
 {
-    std::cout << "Draw background" << std::endl;
     _win.Render().draw(_background->res());
 }
