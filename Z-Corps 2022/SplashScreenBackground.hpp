@@ -6,7 +6,10 @@
 class SplashScreenBackground : public SkullEngine::GameScreen::AGameScreen
 {
 public:
-    SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &, SkullEngine::Asset::AssetManager &, SkullEngine::Window::Window &, SkullEngine::Core &);
+    SplashScreenBackground(SkullEngine::ScreenManager::ScreenManager &,
+                           SkullEngine::Asset::AssetManager &,
+                           SkullEngine::Window::Window &,
+                           SkullEngine::Core &);
     ~SplashScreenBackground(void) {};
 
     void    Init();

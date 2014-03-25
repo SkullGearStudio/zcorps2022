@@ -122,6 +122,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClCompile Include="initSplashScreen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SplashScreenBackground.cpp" />
+    <ClCompile Include="SplashScreenLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\SkullEngine\include\SkullEngine\AAsset.hpp" />
@@ -143,6 +144,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClInclude Include="resource.h" />
     <ClInclude Include="Screens.hpp" />
     <ClInclude Include="SplashScreenBackground.hpp" />
+    <ClInclude Include="SplashScreenLoader.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Z-Corps 2022.rc" />

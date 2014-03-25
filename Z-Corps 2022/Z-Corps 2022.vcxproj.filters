@@ -85,6 +85,9 @@
     <ClCompile Include="initSplashScreen.cpp">
       <Filter>Game\Screens</Filter>
     </ClCompile>
+    <ClCompile Include="SplashScreenLoader.cpp">
+      <Filter>Game\Screens\Splash Screen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screens.hpp">
@@ -143,6 +146,9 @@
     </ClInclude>
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Text.hpp">
       <Filter>SkullEngine\Asset\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashScreenLoader.hpp">
+      <Filter>Game\Screens\Splash Screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
