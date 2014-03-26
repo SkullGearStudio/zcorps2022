@@ -23,7 +23,7 @@ namespace SkullEngine
             typedef std::list<Screen *> screen_list;
 
         public:
-            ScreenManager(Window::Window &);
+            ScreenManager(Window::Window &, Core &);
             ~ScreenManager(void) {};
 
             void	AddScreen(Screen &);
@@ -41,6 +41,7 @@ namespace SkullEngine
             screen_map *_screens;
             screen_list *_actives;
             Window::Window  &_win;
+            Core    &_core;
             bool    break_r;
         };
     }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <SkullEngine\Window.hpp>
+#include <SkullEngine\Core.hpp>
 
 #include "SplashScreenLoader.hpp"
 
@@ -38,7 +39,7 @@ void    SplashScreenLoader::Update()
         if (_load_tab[i]._fct == NULL)
         {
             Sleep(1500);
-            std::cout << "Load complete !" << std::endl;
+            _core.cout("Load complete !");
             _mutexL.unlock();
             _win.Exit();
             _manager.Break();

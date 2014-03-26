@@ -13,9 +13,9 @@ void    initSplashScreen(SkullEngine::Core &core, SkullEngine::Asset::AssetManag
     assets.LoadAsset(*bg_spr);
     SkullEngine::Asset::Font *consolas = new SkullEngine::Asset::Font("consolas", "Assets/font/consola.ttf");
     assets.LoadAsset(*consolas);
-    std::cout << "Splash screen assets loaded..." << std::endl;
+    core.cout("Splash screen assets loaded...");
 
-    SkullEngine::Window::Window *splash_window = new SkullEngine::Window::Window(SkullEngine::WindowType::SPLASHSCREEN, 1004, 357, "Splash screen", assets);
+    SkullEngine::Window::Window *splash_window = new SkullEngine::Window::Window(SkullEngine::WindowType::SPLASHSCREEN, 1004, 357, "Splash screen", assets, core);
 
     SkullEngine::Window::Scene  *splash_scene = new SkullEngine::Window::Scene("Splash Screen");
     SplashScreenBackground  *splash_screen = new SplashScreenBackground(splash_window->Manager(), assets, *splash_window, core);
@@ -25,5 +25,5 @@ void    initSplashScreen(SkullEngine::Core &core, SkullEngine::Asset::AssetManag
     splash_window->FirstScene(*splash_scene);
 
     core.AddWindow(*splash_window);
-    std::cout << "Splash screen initialized..." << std::endl;
+    core.cout("Splash screen initialized...");
 }

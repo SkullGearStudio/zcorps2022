@@ -3,6 +3,7 @@
 #include "SkullEngine\AGameScreen.hpp"
 #include "SkullEngine\Exception.hpp"
 #include "SkullEngine\Window.hpp"
+#include "SkullEngine\Core.hpp"
 
 namespace SkullEngine
 {
@@ -59,6 +60,7 @@ namespace SkullEngine
                 _active = true;
             } catch (Exception ex)
             {
+                _core.cout("EXCEPTION : " + ex.msg());
                 ex.box();
                 ::exit(-1);
             }
@@ -72,6 +74,7 @@ namespace SkullEngine
                 _active = false;
             } catch (Exception ex)
             {
+                _core.cout("EXCEPTION : " + ex.msg());
                 ex.box();
                 ::exit(-1);
             }
@@ -85,6 +88,7 @@ namespace SkullEngine
                 _popup = true;
             } catch (Exception ex)
             {
+                _core.cout("EXCEPTION : " + ex.msg());
                 ex.box();
                 ::exit(-1);
             }
@@ -98,6 +102,7 @@ namespace SkullEngine
                 _popup = false;
             } catch (Exception ex)
             {
+                _core.cout("EXCEPTION : " + ex.msg());
                 ex.box();
                 ::exit(-1);
             }

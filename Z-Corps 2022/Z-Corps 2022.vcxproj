@@ -59,6 +59,7 @@
       <SDLCheck>true</SDLCheck>
       <EnablePREfast>false</EnablePREfast>
       <AdditionalIncludeDirectories>$(SolutionDir)SkullEngine\include;$(SolutionDir)SFML\include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -88,6 +89,8 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
       <SDLCheck>true</SDLCheck>
       <ProgramDataBaseFileName />
       <AdditionalIncludeDirectories>$(SolutionDir)SkullEngine\include;$(SolutionDir)SFML\include;</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -95,6 +98,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(SolutionDir)SFML\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
     <PreBuildEvent>
       <Command>rd /s/q $(SolutionDir)$(Configuration)\Assets

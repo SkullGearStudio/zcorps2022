@@ -9,12 +9,13 @@
 int     main()
 {
     SkullEngine::Core GameCore;
-    std::cout << "Game core initialized..." << std::endl;
+    GameCore.cout("Game core initialized...");
     SkullEngine::Asset::AssetManager &AssetManager = GameCore.Assets();
-    std::cout << "Asset manager initialized..." << std::endl;
+    GameCore.cout("Asset manager initialized...");
     
     initSplashScreen(GameCore, AssetManager);
     GameCore.Run();
 
+    system("PAUSE");
     return 0;
 }

@@ -3,6 +3,7 @@
 #include <map>
 
 #include "SkullEngine\AAsset.hpp"
+#include "Types.hpp"
 
 namespace SkullEngine
 {
@@ -14,7 +15,7 @@ namespace SkullEngine
             typedef std::map<std::string, AAsset *> asset_map;
 
         public:
-            AssetManager(void) {};
+            AssetManager(Core &);
             ~AssetManager(void) {};
             AAsset &GetAsset(const std::string &) const;
             void    LoadAsset(AAsset &);
@@ -22,6 +23,7 @@ namespace SkullEngine
 
         private:
             asset_map   _assets;
+            Core    &_core;
         };
     }
 }

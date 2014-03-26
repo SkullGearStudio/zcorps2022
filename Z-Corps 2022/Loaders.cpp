@@ -13,16 +13,16 @@ void    SplashScreenLoader::ImgLoad()
     SkullEngine::Asset::SimpleSprite *main_menu_bg = new SkullEngine::Asset::SimpleSprite("main_menu_background", _assets.GetAsset("main_menu_background_texture"));
     _assets.LoadAsset(*main_menu_bg);
 
-    std::cout << "Img loaded" << std::endl;
+    _core.cout("Imgs loaded...");
 }
 
 void    SplashScreenLoader::WindowLoad()
 {
     _mutexL.lock();
-    SkullEngine::Window::Window *gameWin = new SkullEngine::Window::Window(SkullEngine::WindowType::DEFAULT, 1600, 900, "Z-Corps 2022", _assets);
+    SkullEngine::Window::Window *gameWin = new SkullEngine::Window::Window(SkullEngine::WindowType::DEFAULT, 1600, 900, "Z-Corps 2022", _assets, _core);
     
     _core.AddWindow(*gameWin);
-    std::cout << "Game window created" << std::endl;
+    _core.cout("Game window created...");
     _mutexL.unlock();
 }
 
@@ -36,7 +36,7 @@ void    SplashScreenLoader::ScenesLoad()
 
     gameWin.FirstScene(*menuScene);
     gameWin.AddScene(*optionScene);
-    std::cout << "Game scenes created" << std::endl;
+    _core.cout("Game scenes created...");
     _mutexL.unlock();
 }
 
@@ -48,6 +48,6 @@ void    SplashScreenLoader::ScreensLoad()
 
     MainMenuBackground *main_menu_bg = new MainMenuBackground(gameWin.Manager(), _assets, gameWin, _core);
     menuScene.AddScreen(*main_menu_bg);
-    std::cout << "Game screens loaded" << std::endl;
+    _core.cout("Game screens loaded");
     _mutexL.unlock();
 }

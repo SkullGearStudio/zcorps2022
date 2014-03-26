@@ -13,6 +13,7 @@ namespace SkullEngine
         Exception(const std::string &msg) : _msg(new std::string(msg)) {}
         ~Exception() throw () {}
         const char *what() const throw() { return _msg->c_str(); }
+        const std::string &msg() { return *_msg; }
         void box() { ::MessageBoxA(NULL, _msg->c_str(), "Exception", MB_OK | MB_ICONERROR); delete _msg;}
     };
 }

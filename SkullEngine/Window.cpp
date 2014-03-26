@@ -1,19 +1,21 @@
 #include "SkullEngine\Window.hpp"
 #include "SkullEngine\Exception.hpp"
+#include "SkullEngine\Core.hpp"
 
 namespace SkullEngine
 {
     namespace Window
     {
-        Window::Window(WindowType t, uint w, uint h, const std::string &n, Asset::AssetManager &a) :
+        Window::Window(WindowType t, uint w, uint h, const std::string &n, Asset::AssetManager &a, Core &c) :
             _type(t),
             _width(w),
             _height(h),
             _name(new std::string(n)),
             _assets(a),
+            _core(c),
             _exit(false),
             _current(NULL),
-            _scm(ScreenManager::ScreenManager(*this))
+            _scm(ScreenManager::ScreenManager(*this, c))
         {
         }
 
@@ -37,6 +39,7 @@ namespace SkullEngine
                     return *(it->second);
             } catch (Exception ex)
             {
+                _core.cout("EXCEPTION : " + ex.msg());
                 ex.box();
                 exit(-1);
             }

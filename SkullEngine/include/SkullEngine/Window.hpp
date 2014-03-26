@@ -21,7 +21,7 @@ namespace SkullEngine
             typedef std::list<Screen *> screen_list;
         public:
             // CTOR / DTOR
-            Window(WindowType, uint, uint, const std::string &, Asset::AssetManager &);
+            Window(WindowType, uint, uint, const std::string &, Asset::AssetManager &, Core &);
             ~Window() {};
 
             // GETTER
@@ -45,6 +45,7 @@ namespace SkullEngine
             uint    _height;
             std::string *_name;
             Asset::AssetManager  &_assets;
+            Core    &_core;
             bool    _exit;
             Scene *_current;
             scene_map   _scenes;

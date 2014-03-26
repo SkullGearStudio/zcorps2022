@@ -1,6 +1,7 @@
 #include "SkullEngine\ScreenManager.hpp"
 #include "SkullEngine\Exception.hpp"
 #include "SkullEngine\Window.hpp"
+#include "SkullEngine\Core.hpp"
 
 #include <algorithm>
 
@@ -13,10 +14,11 @@ namespace SkullEngine
             bool operator() (Screen *s1, Screen *s2) { return (s1->Layer() < s2->Layer()); }
         } LayerComp;
 
-        ScreenManager::ScreenManager(Window::Window &w) :
+        ScreenManager::ScreenManager(Window::Window &w, Core &c) :
             _screens(new screen_map),
             _actives(new screen_list),
-            _win(w)
+            _win(w),
+            _core(c)
         {
         }
         void	ScreenManager::AddScreen(Screen &screen)
@@ -48,6 +50,8 @@ namespace SkullEngine
                 _screens->erase(it);
             } catch (Exception ex)
             {
+
+                _core.cout("EXCEPTION : " + ex.msg());
                 ex.box();
                 ::exit(-1);
             }
@@ -75,6 +79,7 @@ namespace SkullEngine
                 OrderActive();
             } catch (Exception ex)
             {
+                _core.cout("EXCEPTION : " + ex.msg());
                 ex.box();
                 ::exit(-1);
             }
@@ -92,6 +97,7 @@ namespace SkullEngine
                 UnactiveScreen(selected);
             } catch (Exception ex)
             {
+                _core.cout("EXCEPTION : " + ex.msg());
                 ex.box();
                 ::exit(-1);
             }
