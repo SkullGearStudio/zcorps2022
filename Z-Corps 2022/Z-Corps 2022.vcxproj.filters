@@ -100,6 +100,9 @@
     <ClCompile Include="Loaders.cpp">
       <Filter>Game\Screens\Splash Screen</Filter>
     </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Game\Screens\Game Win\Main Menu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screens.hpp">
@@ -163,6 +166,9 @@
       <Filter>Game\Screens\Splash Screen</Filter>
     </ClInclude>
     <ClInclude Include="MainMenuBackground.hpp">
+      <Filter>Game\Screens\Game Win\Main Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.hpp">
       <Filter>Game\Screens\Game Win\Main Menu</Filter>
     </ClInclude>
   </ItemGroup>

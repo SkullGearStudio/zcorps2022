@@ -70,12 +70,14 @@
     <PreBuildEvent>
       <Command>rd /s/q $(SolutionDir)$(Configuration)\Assets
 del /Q $(SolutionDir)$(Configuration)\*.dll
+del /Q $(SolutionDir)$(Configuration)\log.txt
 del /Q $(SolutionDir)$(Configuration)\$(TargetName).exe</Command>
       <Message>Cleaning folder</Message>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>copy $(Configuration)\$(TargetName).exe $(SolutionDir)$(Configuration)\
 copy $(SolutionDir)SFML\dlld\*.dll $(SolutionDir)$(Configuration)\
+copy $(SolutionDir)redist\dlld\*.dll $(SolutionDir)$(Configuration)\
 XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/i</Command>
       <Message>copying game exec</Message>
     </PostBuildEvent>
@@ -103,12 +105,14 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <PreBuildEvent>
       <Command>rd /s/q $(SolutionDir)$(Configuration)\Assets
 del /Q $(SolutionDir)$(Configuration)\*.dll
+del /Q $(SolutionDir)$(Configuration)\log.txt
 del /Q $(SolutionDir)$(Configuration)\$(TargetName).exe</Command>
       <Message>Cleaning folder</Message>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>copy $(Configuration)\$(TargetName).exe $(SolutionDir)$(Configuration)\
 copy $(SolutionDir)SFML\dll\*.dll $(SolutionDir)$(Configuration)\
+copy $(SolutionDir)redist\dll\*.dll $(SolutionDir)$(Configuration)\
 XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/i</Command>
       <Message>copying game exec</Message>
     </PostBuildEvent>
@@ -129,6 +133,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClCompile Include="initSplashScreen.cpp" />
     <ClCompile Include="Loaders.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="MainMenuBackground.cpp" />
     <ClCompile Include="SplashScreenBackground.cpp" />
     <ClCompile Include="SplashScreenLoader.cpp" />
@@ -150,6 +155,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Texture.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Types.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Window.hpp" />
+    <ClInclude Include="MainMenu.hpp" />
     <ClInclude Include="MainMenuBackground.hpp" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Screens.hpp" />
