@@ -153,9 +153,6 @@
     <ClInclude Include="..\SkullEngine\include\SkullEngine\SimpleSprite.hpp">
       <Filter>SkullEngine\Asset\Types</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Res</Filter>
-    </ClInclude>
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Image.hpp">
       <Filter>SkullEngine\Asset\Types</Filter>
     </ClInclude>
@@ -176,6 +173,9 @@
     </ClInclude>
     <ClInclude Include="GameBackground.hpp">
       <Filter>Game\Screens\Game Win</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.hpp">
+      <Filter>Res</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

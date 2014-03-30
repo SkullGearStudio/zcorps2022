@@ -159,7 +159,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClInclude Include="GameBackground.hpp" />
     <ClInclude Include="MainMenu.hpp" />
     <ClInclude Include="MainMenuBackground.hpp" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource.hpp" />
     <ClInclude Include="Screens.hpp" />
     <ClInclude Include="SplashScreenBackground.hpp" />
     <ClInclude Include="SplashScreenLoader.hpp" />
