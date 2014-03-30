@@ -130,6 +130,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClCompile Include="..\SkullEngine\Text.cpp" />
     <ClCompile Include="..\SkullEngine\Texture.cpp" />
     <ClCompile Include="..\SkullEngine\Window.cpp" />
+    <ClCompile Include="GameBackground.cpp" />
     <ClCompile Include="initSplashScreen.cpp" />
     <ClCompile Include="Loaders.cpp" />
     <ClCompile Include="main.cpp" />
@@ -155,6 +156,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Texture.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Types.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Window.hpp" />
+    <ClInclude Include="GameBackground.hpp" />
     <ClInclude Include="MainMenu.hpp" />
     <ClInclude Include="MainMenuBackground.hpp" />
     <ClInclude Include="resource.h" />

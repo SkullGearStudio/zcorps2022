@@ -4,7 +4,7 @@ namespace SkullEngine
 {
     namespace Asset
     {
-        Texture::Texture(const std::string &name, const std::string &file) :
+        Texture::Texture(const std::string &name, const std::string &file, bool repeated) :
             AAsset(name)
         {
             if (!_tex.loadFromFile(file))
@@ -12,6 +12,7 @@ namespace SkullEngine
                 system("PAUSE");
                 exit(-1);
             }
+            _tex.setRepeated(repeated);
         }
         sf::Texture &Texture::res()
         {

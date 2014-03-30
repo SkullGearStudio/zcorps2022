@@ -103,6 +103,9 @@
     <ClCompile Include="MainMenu.cpp">
       <Filter>Game\Screens\Game Win\Main Menu</Filter>
     </ClCompile>
+    <ClCompile Include="GameBackground.cpp">
+      <Filter>Game\Screens\Game Win</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screens.hpp">
@@ -170,6 +173,9 @@
     </ClInclude>
     <ClInclude Include="MainMenu.hpp">
       <Filter>Game\Screens\Game Win\Main Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="GameBackground.hpp">
+      <Filter>Game\Screens\Game Win</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -11,7 +11,7 @@ namespace SkullEngine
         class Texture : public AAsset
         {
         public:
-            Texture(const std::string &, const std::string &);
+            Texture(const std::string &, const std::string &, bool = false);
             ~Texture(void) {};
 
             sf::Texture &res();

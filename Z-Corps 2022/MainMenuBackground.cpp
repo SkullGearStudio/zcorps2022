@@ -4,11 +4,10 @@
 
 #include "MainMenuBackground.hpp"
 
-
-
 MainMenuBackground::MainMenuBackground(SkullEngine::ScreenManager::ScreenManager &scm, SkullEngine::Asset::AssetManager &am, SkullEngine::Window::Window &w, SkullEngine::Core &c) :
-    AGameScreen(scm, am, w, c, "main_menu_background")
+    AGameScreen(scm, am, w, c, "game_background")
 {
+    _background = &dynamic_cast<SkullEngine::Asset::SimpleSprite &>(_assets.GetAsset("main_menu_background"));
 }
 
 void    MainMenuBackground::Init()
@@ -16,7 +15,6 @@ void    MainMenuBackground::Init()
     On();
     LayerDown();
     PopUp();
-    _background = &dynamic_cast<SkullEngine::Asset::SimpleSprite &>(_assets.GetAsset("main_menu_background"));
 }
 
 void    MainMenuBackground::Draw()
