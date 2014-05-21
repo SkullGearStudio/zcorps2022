@@ -106,6 +106,9 @@
     <ClCompile Include="GameBackground.cpp">
       <Filter>Game\Screens\Game Win</Filter>
     </ClCompile>
+    <ClCompile Include="..\SkullEngine\TextDefiler.cpp">
+      <Filter>SkullEngine\GUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screens.hpp">
@@ -176,6 +179,9 @@
     </ClInclude>
     <ClInclude Include="resource.hpp">
       <Filter>Res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\TextDefiler.hpp">
+      <Filter>SkullEngine\GUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

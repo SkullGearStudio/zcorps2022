@@ -41,6 +41,8 @@ void    SplashScreenLoader::Update()
             Sleep(1500);
             _core.cout("Load complete !");
             _mutexL.unlock();
+            //system("PAUSE");
+            //exit(-1);
             _win.Exit();
             _manager.Break();
             return ;

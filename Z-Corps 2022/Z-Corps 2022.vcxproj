@@ -128,6 +128,9 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClCompile Include="..\SkullEngine\Scene.cpp" />
     <ClCompile Include="..\SkullEngine\ScreenManager.cpp" />
     <ClCompile Include="..\SkullEngine\Text.cpp" />
+    <ClCompile Include="..\SkullEngine\TextDefiler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\SkullEngine\Texture.cpp" />
     <ClCompile Include="..\SkullEngine\Window.cpp" />
     <ClCompile Include="GameBackground.cpp" />
@@ -153,6 +156,7 @@ XCOPY $(SolutionDir)Assets $(SolutionDir)$(Configuration)\Assets /s/h/e/k/f/c/y/
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Scene.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\ScreenManager.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Text.hpp" />
+    <ClInclude Include="..\SkullEngine\include\SkullEngine\TextDefiler.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Texture.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Types.hpp" />
     <ClInclude Include="..\SkullEngine\include\SkullEngine\Window.hpp" />
